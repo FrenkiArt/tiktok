@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Shaidullin Arthur 
+    Coder 
+    https://github.com/FrenkiArt
+
+    Surname Name 
+    design 
+    ancor
+
+# THANKS
+
+    <name>
+
+

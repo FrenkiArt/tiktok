@@ -1,0 +1,15 @@
+// src/views/components/breadcrumbs/breadcrumbs.scss
+
+.breadcrumbs {
+  li {
+    &:last-child {
+      a {
+        position: relative;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+  }
+}

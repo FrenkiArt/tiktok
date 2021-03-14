@@ -1,0 +1,101 @@
+//- src/views/mixins/mixins.pug
+
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+
+mixin navLink(link, name, last)
+  li
+    if(last)
+      a(href=link).nav-link.last-link=name
+    else
+      a(href=link).nav-link=name
+
+// Radio button
+mixin radio(args) 
+    .radio(id=attributes.id ? attributes.id : null, class=attributes.class ? attributes.class : null): label
+      input(
+        type='radio'
+        name=args.name
+        value=args.value
+        checked=args.checked
+        disabled=args.disabled)
+      != args.radiolabel
+
+//- Text field
+mixin field(args)
+  input.form-control(
+    type=args.type ? args.type : 'text'
+    name=args.name ? args.name : null
+    value=args.value ? args.value : null
+    placeholder=args.placeholder ? args.placeholder : null
+    class=attributes.class
+    id=attributes.id ? attributes.id : null
+  )
+  
+// - Button
+mixin button(args)
+    button.btn(
+      type=args.type ? args.type : 'button'
+      class=attributes.class ? attributes.class : 'btn-default')= args.buttonlabel
+
+//- Radio button usage 1
+//-+radio ({ 
+  radiolabel: 'Chris', 
+  name: 'radio' 
+//-})
+
+//- Radio button usage 2
+//-+radio ({ 
+  radiolabel: 'Mike', 
+  name: 'radio' 
+//-})
+
+//- Input field usage
+//-+field({ 
+  type: 'email', 
+  name: 'email', 
+  value: 'email@example.com', 
+  placeholder: 'Email Address' 
+//-})
+
+//- Button
+//-+button({ 
+  buttonlabel: 'Save changes', 
+  type: 'submit'
+//-})
+
+//- Input group
+mixin input-group(fieldargs, buttonargs)
+  .input-group
+    +field(fieldargs)
+    +button(buttonargs)
+    
+//-+input-group({ 
+  type: 'email', 
+  name: 'email', 
+  value: 'email@example.com', 
+  placeholder: 'Email Address' 
+//-},{ 
+  buttonlabel: 'Save changes', 
+  type: 'submit'
+//-})
+
+mixin input-group-flexible(args)
+  .input-group
+    each item in args
+      +#{item.field}(item)
+      
+//-+input-group-flexible([{
+  field: 'field',
+  type: 'email', 
+  name: 'email', 
+  value: 'email@example.com', 
+  placeholder: 'Email Address' 
+//-},{ 
+  field: 'button',
+  buttonlabel: 'Save changes', 
+  type: 'submit'
+//-}])
+

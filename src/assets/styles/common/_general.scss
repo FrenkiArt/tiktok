@@ -1,0 +1,61 @@
+/* src/assets/styles/common/_general.scss  */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .wrap-main {
+    margin-bottom: auto;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

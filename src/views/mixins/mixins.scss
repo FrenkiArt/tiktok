@@ -1,0 +1,31 @@
+// src/views/components/mixins/mixins.scss
+@mixin size($n) {
+  width: calc(100% / 12 * #{$n} - 30px);
+}
+
+@mixin size-from($px, $n) {
+  @media screen and (max-width: $px) {
+    @include size($n);
+  }
+}
+
+@mixin isFlex($align: center, $justify: center, $direction: row, $wrap: wrap) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
+
+@mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
+  background-image: url($url);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin container($width: 1124, $margin: auto, $padding: 0) {
+  margin: $margin;
+  max-width: $width + px;
+  padding: $padding;
+}

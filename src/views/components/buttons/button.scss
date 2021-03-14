@@ -1,0 +1,16 @@
+/* src/assets/styles/components/_button.scss  */
+
+.clean-button {
+  background: none;
+  border: none;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
+}
+
+button {
+  @extend .clean-button;
+  cursor: pointer;
+}

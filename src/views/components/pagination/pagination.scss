@@ -1,0 +1,17 @@
+// src/views/components/pagination/pagination.scss
+
+.pagination {
+  li {
+    &:nth-of-type(1) {
+      a {
+        position: relative;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      position: relative;
+    }
+  }
+}
