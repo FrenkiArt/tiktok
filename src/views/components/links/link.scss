@@ -1,5 +1,12 @@
 // src/views/components/links/link.scss
+@import '../../../assets/styles/utils/variables';
 
 .link {
   position: relative;
+  text-decoration: none;
+  color: $color-primary-green;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

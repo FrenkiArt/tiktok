@@ -1,4 +1,4 @@
-extends ../templates/_template.pug
+extends ../templates/_index-template.pug
 
 block title
   title Заголовок
@@ -11,21 +11,260 @@ block basicSeo
 block content
   |
   |
-  //- Desktop page
-  h1 Начальная страницаеы   
-  |
-  |
-  include ../components/breadcrumbs/breadcrumbs.pug
-  |
-  |
-   
-  |
-  |
-
-  |
-  |
-  <svg width="12" height="16">
-    <use xlink:href="./assets/svg/svg_sprite.svg#geo"></use>
-  </svg>
+  #fullpage.page-slider
+    |
+    |
+    .section.first
+      |
+      |
+      .container
+        |
+        |
+        img(src="assets/svg/first-img.svg", alt="" loading="lazy").first__img
+        |
+        |
+        .first__text
+          |
+          |
+          .h1 Взлом TikTok
+          |
+          |
+          .h5 Достаточно ввести ссылку и мы получим всю информацию о пользователе
+          |
+          |
+          form(action="#").form-1 
+            |
+            |
+            .clip-input 
+              input(type="url", name="", placeholder="Адрес страницы")
+            |
+            |
+            +btn({
+              type: 'button',
+              class: 'btn--rotate',
+              text: 'Получить данные',
+              disabled: null
+            })
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+    |
+    |
+    .section.methods
+      |
+      |
+      .container
+        |
+        |
+        .methods__text 
+          |
+          |
+          .h2 Метод работы
+          |
+          |
+          .h5 Уникальный метод доступа к скрытой информации пользователей со всего мира, которым можно воспользоваться уже сегодня. Вы можете не только взломать совершенно любую страницу социальной сети, но и восстановить утраченный пароль от своего собственного аккаунта.
+          |
+          |
+        ul.methods__list
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Инкраментная проверка пользователя
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Инициация атаки уязвимости профиля
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Управления списками друзей и группами
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Полный контроль над страницей аккаунта
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Читайте входящие и исходящие сообщения
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Скачивание пакета данных пользователя
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Авторизация пользователя на удаленом сервере
+          li 
+            <svg width="16" height="16" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#lil-star'></use> 
+            </svg>
+            | Просматривайте все фотографии и видео  профиля
+        |
+        |
+      |
+      |
+    |
+    |
+    .section.compatibility
+      |
+      |
+      .container
+        |
+        |
+        .compatibility__text
+          |
+          |
+          img(src="assets/svg/circles.svg", alt="" loading="lazy").compatibility__icon 
+          |
+          |
+          .h2 Совместимость
+          |
+          |
+          p Не имеет значения, на каком устройстве установлен Vkontakte или Instagram. Это может быть смартфон с операционной системой Android, iOS или Windows. Планшет, ПК или ноутбук. 
+          |
+          |
+          p Важно отметить, что данный процесс полностью автоматизировани никто из администраторов ресурса не имеет доступа к пользовательским файлам и к вашей персональной информации. 
+          |
+          |
+          p Система работает для вас без остановки и исключает любые проявления человеческого фактора на каждом этапе..
+          |
+          |
+        |
+        |
+        img(src="assets/svg/big-hand.svg", alt="" loading="lazy").compatibility__img 
+        |
+        |
+      |
+      |
+    |
+    |
+    .section.stages 
+      |
+      |
+      .container
+        |
+        |
+        .h2.stages__title Этапы
+        |
+        |
+        .stages__list 
+          |
+          |
+          .stages__item
+            .step 
+              .step__content
+                .step__count 1
+                .step__text Зарегистрируйтесь на сайте 
+          |
+          |
+          .stages__item
+            .step 
+              .step__content
+                .step__count 2
+                .step__text Определитесь с аккаунтом, который хотите восстановить 
+          |
+          |
+          .stages__item
+            .step 
+              .step__content
+                .step__count 3
+                .step__text Скопируйте никнейм аккаунта, или перепишите в это поле  
+          |
+          |
+          .stages__item
+            .step 
+              .step__content
+                .step__count 4
+                .step__text Дождитесь процесс получения данных авторизации нашей системой  
+          |
+          |
+          .stages__item
+            .step  
+              .step__content
+                .step__count 5
+                .step__text Оплатите, чтобы получить доступ уже подготовленным данным  
+          |
+          |
+          .stages__item
+            .step  
+              .step__content
+                .step__count 6
+                .step__text Войдите в желаемый аккаунт
+          |
+          |
+          .stages__item
+            .step  
+              .step__content
+                .step__count 7
+                .step__text Оставьте положительный отзыв, если вам все понравилось
+          |
+          |
+        |
+        |
+      |
+      |
+    |
+    |
+    .section.guarantees
+      |
+      |
+      .container
+        |
+        |
+        .h2.guarantees__title Гарантии
+        |
+        |
+        .guarantees__list 
+          |
+          |
+          .guarantees__item 
+            .warranty
+              img(src="assets/svg/waranty-icon-1.svg", alt="" loading="lazy").warranty__icon 
+              .h4.warranty__title Сохранность ваших денег
+              .warranty__text Мы не просим аванс наперед. Сначала мы взламываем профиль Tik-tok и только после этого вы вносите необходимую сумму. Если по каким-либо причинам мы не смогли подобрать логин с паролем, денежные средства будут возвращены вам в полном объеме.
+          |
+          |
+          .guarantees__item 
+            .warranty
+              img(src="assets/svg/waranty-icon-2.svg", alt="" loading="lazy").warranty__icon 
+              .h4.warranty__title Безопасно для вашего устройства
+              .warranty__text Мы не предлагаем установить шпионские программы на ваш компьютер или смартфон. Процесс взлома проходит в режиме онлайн и полностью автоматизирован. Ваше устройство надежно защищено от несанкционированного доступа третьих лиц.
+          |
+          |
+          .guarantees__item 
+            .warranty
+              img(src="assets/svg/waranty-icon-3.svg", alt="" loading="lazy").warranty__icon 
+              .h4.warranty__title Конфиденциально
+              .warranty__text Система предотвращает утечку персональной информации. Работа ресурса базируется на принципе анонимности и шифровании данных. Ваши платежные операции, состояние счета, номера банковских карт и реквизиты электронных кошельков недоступны злоумышленникам. Будьте уверены в 100% конфиденциальности и неразглашении данных.
+          |
+          |
+          .guarantees__item 
+            .warranty
+              img(src="assets/svg/waranty-icon-4.svg", alt="" loading="lazy").warranty__icon  
+              .h4.warranty__title Прогрессивно
+              .warranty__text Отслеживаем изменения в работе социальной сети Tik-tok, совершенствуем сервис Tik-tok vzlom и регулярно выпускаем обновления для его стабильной работы. Служба поддержки работает стабильно и круглосуточно. У вас есть пожелания? Мы прислушиваемся к мнению пользователей и обязательно учтем ваши предложения.
+          |
+          |
+        |
+        |
+      |
+      |
+    |
+    | 
+    include ../components/footer/footer-index.pug
+    |
+    |
   |
   |

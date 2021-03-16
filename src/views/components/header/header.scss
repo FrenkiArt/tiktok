@@ -1,12 +1,68 @@
 // src/views/components/header/header.scss
+@import '../../../assets/styles/utils/variables';
 
 .header {
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-h;
+  }
+}
+
+.menu-list {
+  display: flex;
+  height: 100%;
+
+  // .menu-list__item
+  &__item {
+    margin: 0 32px;
+  }
+
+  // .menu-list__link
+  &__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 8px);
+      bottom: 0;
+      height: 1px;
+      left: 50%;
+      transform: translate(-50%, 2px);
+      background-color: #ffffff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .menu-list__link.active
+  &__link.active {
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
 /*
   Responsive
 */
 
-@media screen and(max-width: 800) {
+@media screen and(max-width: 800px) {
 }

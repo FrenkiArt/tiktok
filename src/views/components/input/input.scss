@@ -1,0 +1,238 @@
+// src/views/components/input/input.scss
+@import '../../../assets/styles/utils/variables';
+
+.uni-input {
+  display: inline-flex;
+  max-width: 342px;
+  width: 100%;
+  height: 48px;
+  position: relative;
+  transition: border 0.3s;
+
+  @media screen and(max-width: 800px) {
+    height: 40px;
+    max-width: 288px;
+  }
+
+  // .uni-input__input
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 5px 40px 5px 20px;
+    border-radius: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+
+    &:not(:placeholder-shown) ~ .uni-input__placeholder {
+      transform: translate(0, -32px);
+      font-size: 13px;
+      line-height: 16px;
+      padding: 0 6px;
+
+      @media screen and(max-width: 800px) {
+        font-size: 10px;
+        transform: translate(0, -28px);
+      }
+
+      & ~ .uni-input__wrap-icons .icon-clear {
+        display: block;
+      }
+
+      & ~ .uni-input__wrap-icons .icon-hide-pass {
+        display: block;
+      }
+
+      & ~ .uni-input__wrap-icons .icon-show-pass {
+        display: block;
+      }
+    }
+
+    &:focus {
+      & ~ .uni-input__placeholder {
+        transform: translate(0, -32px);
+        font-size: 13px;
+        line-height: 16px;
+        padding: 0 6px;
+
+        @media screen and(max-width: 800px) {
+          font-size: 10px;
+          transform: translate(0, -28px);
+        }
+      }
+    }
+
+    &:invalid,
+    &.invalid {
+      & ~ .uni-input__wrap-icons .icon-wrong {
+        display: block;
+      }
+    }
+  }
+
+  // .uni-input__placeholder
+  &__placeholder {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    transition: all 0.3s;
+    pointer-events: none;
+    transform-origin: 0 0;
+  }
+
+  // .uni-input__wrap-icons
+  &__wrap-icons {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+
+    button {
+      padding: 0;
+      display: none;
+
+      &.dn {
+        display: none !important;
+      }
+    }
+
+    svg {
+      margin: 0 4px;
+    }
+
+    /* .icon-clear {
+    }
+
+    .icon-wrong {
+    }
+
+    .icon-hide-pass {
+    }
+
+    .icon-show-pass {
+    } */
+  }
+}
+
+.uni-input--dark {
+  .uni-input__input {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    &:hover {
+      border: 1px solid #ffffff;
+    }
+
+    &:focus {
+      border: 1px solid #ffffff;
+
+      & ~ .uni-input__placeholder {
+        background-color: #1a2442;
+      }
+    }
+
+    &:active {
+      border: 1px solid #5bcad2;
+    }
+
+    &:disabled {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.2);
+
+      & ~ .uni-input__placeholder {
+        color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &:invalid,
+    &.invalid {
+      border: 1px solid #e93745;
+      color: #e93745;
+    }
+  }
+
+  .uni-input__placeholder {
+    color: #8c91a0;
+    background-color: #1a2442;
+  }
+}
+
+.uni-input--white {
+  .uni-input__input {
+    color: #000000;
+    border: 1px solid #4f4f4f;
+
+    &:hover {
+      border: 1px solid #1a2442;
+    }
+
+    &:focus {
+      border: 1px solid #1a2442;
+
+      & ~ .uni-input__placeholder {
+        background-color: #ffffff;
+      }
+    }
+
+    &:active {
+      border: 1px solid #5bcad2;
+    }
+
+    &:disabled {
+      border: 1px solid #e0e0e0;
+      color: #e0e0e0;
+
+      & ~ .uni-input__placeholder {
+        color: #e0e0e0;
+      }
+    }
+
+    &:invalid,
+    &.invalid {
+      border: 1px solid #e93745;
+      color: #e93745;
+    }
+  }
+
+  .uni-input__placeholder {
+    color: #bdbdbd;
+    background-color: #ffffff;
+  }
+}
+
+.clip-input {
+  display: inline-flex;
+  clip-path: polygon(0% 21%, 100% 21%, 100% 100%, 0% 100%);
+
+  input {
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    background-color: transparent;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: none;
+    border-top: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    padding: 5px 24px;
+    color: #ffffff;
+    height: 56px;
+    width: 264px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.56);
+    }
+
+    &:invalid,
+    &.invalid {
+      border-color: #e93745;
+      color: #e93745;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+//- src/views/components/tabs/tabs.pug
+
+mixin tabs(args)
+  .tabs(
+    class=args.class
+  )
+    |
+    |
+    each item in args.array
+      button.tabs__item(class=item.class)=item.text
+    |
+    | 
+

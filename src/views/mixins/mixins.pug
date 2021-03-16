@@ -36,9 +36,9 @@ mixin field(args)
   
 // - Button
 mixin button(args)
-    button.btn(
-      type=args.type ? args.type : 'button'
-      class=attributes.class ? attributes.class : 'btn-default')= args.buttonlabel
+  button.btn(
+    type=args.type ? args.type : 'button'
+    class=attributes.class ? attributes.class : 'btn-default')= args.buttonlabel
 
 //- Radio button usage 1
 //-+radio ({ 
@@ -99,3 +99,9 @@ mixin input-group-flexible(args)
   type: 'submit'
 //-}])
 
+mixin load-more(text)
+  .load-more  
+    <svg width="16" height="16" class="load-more__icon">
+      <use xlink:href='./assets/svg/svg_sprite.svg#icon-load'></use> 
+    </svg>
+    .load-more__text=text

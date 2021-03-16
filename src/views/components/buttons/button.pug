@@ -1,6 +1,57 @@
 //- src/views/components/buttons/button.pug
 |
 |
-button Кнопка
+mixin btn(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn'
+    disabled=args.disabled ? args.disabled : null
+  )
+    .bg
+    span=args.text
+|
+|
+mixin btn-plus(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn'
+    disabled=args.disabled ? args.disabled : null
+  )
+    .bg
+    <svg width="14" height="14">
+      <use xlink:href="./assets/svg/svg_sprite.svg#icon-plus"></use>
+    </svg>
+    span=args.text
+|
+|
+mixin btn-rotate(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn--rotate'
+    disabled=args.disabled ? args.disabled : null
+  )
+    .bg 
+    span=args.text
+|
+|
+mixin btn-blue(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn-blue'
+    disabled=args.disabled ? args.disabled : null
+  ) 
+    span=args.text
+|
+|
+mixin btn-red(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn-red'
+    disabled=args.disabled ? args.disabled : null
+  ) 
+    span=args.text
+|
+|
+ 
 |
 |

@@ -1,0 +1,62 @@
+//- src/views/components/header/header-index.pug
+|
+|
+header#header.header.header-index
+  |
+  |
+  .container
+    |
+    |
+    a(href="./" title="Главная").logo
+      img(src="assets/svg/header-logo.svg", alt="" loading="lazy")
+    |
+    |
+    ul.menu-list#myMenu
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link.active(href="#methods", data-menuanchor="methods") Метод работы
+        |
+        |
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link(href="#compatibility", data-menuanchor="compatibility") Совместимость
+        |
+        |
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link(href="#guarantees", data-menuanchor="guarantees") Гарантии
+        |
+        |
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link(href="#stages", data-menuanchor="stages") Этапы
+        |
+        |
+      |
+      |   
+    |
+    |
+    +btn-red({
+      type: 'button',
+      class: 'btn-red',
+      text: 'Личный кабинет',
+      disabled: null
+    })
+    |
+    |
+  |
+  |
+|
+|

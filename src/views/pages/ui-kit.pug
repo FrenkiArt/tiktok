@@ -1,0 +1,666 @@
+extends ../templates/_ui-kit-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='') 
+
+block content 
+  |
+  |
+  .container
+    |
+    |
+    ul.list-ui-kit 
+      |
+      |
+      li 
+        |
+        |
+        a(href="#").link link example
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn',
+          text: '.btn example'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn',
+          text: '.btn disabled',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn--white',
+          text: '.btn--white',
+          disabled: null
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn--white',
+          text: '.btn--white disabled',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-plus({
+          type: 'button',
+          class: 'btn--white btn--plus max-h-40',
+          text: '.btn--white btn--plus max-h-40',
+          disabled: null
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-plus({
+          type: 'button',
+          class: 'btn--white btn--plus max-h-40',
+          text: '.btn--white btn--plus max-h-40',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn--rotate',
+          text: 'Получить данные',
+          disabled: null
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn({
+          type: 'button',
+          class: 'btn--rotate',
+          text: 'Получить данные',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-blue({
+          type: 'button',
+          class: 'btn-blue',
+          text: '.btn-blue',
+          disabled: null
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-blue({
+          type: 'button',
+          class: 'btn-blue',
+          text: '.btn-blue disabled',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-red({
+          type: 'button',
+          class: 'btn-red',
+          text: '.btn-red',
+          disabled: null
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +btn-red({
+          type: 'button',
+          class: 'btn-red',
+          text: '.btn-red disabled',
+          disabled: 'true'
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        | 
+        button.btn-circle 
+          .bg
+          <svg width="16" height="12">
+            <use xlink:href='./assets/svg/svg_sprite.svg#icon-arrow'></use> 
+          </svg>
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        button(disabled="true").btn-circle 
+          .bg
+          <svg width="16" height="12">
+            <use xlink:href='./assets/svg/svg_sprite.svg#icon-arrow'></use> 
+          </svg>
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +load-more("Загрузить еще")
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +tabs({
+          class: 'skin-red', 
+          array: [{class: 'active', text: 'Вход'},
+                  {class: '', text: 'Регистрация'}]
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +tabs({
+          class: 'skin-red', 
+          array: [{class: 'active', text: 'Вход'},
+                  {class: 'disabled', text: 'Регистрация'}]
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +tabs({
+          class: 'skin-blue', 
+          array: [{class: 'active', text: 'Взломать аккаунт'},
+                  {class: '', text: 'Доступные аккаунты'}]
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        +tabs({
+          class: 'skin-blue', 
+          array: [{class: 'active', text: 'Взломать аккаунт'},
+                  {class: 'disabled', text: 'Доступные аккаунты'}]
+        })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .pay-sistems
+          |
+          |
+          .pay-sistems__title Платежные системы
+          |
+          |
+          .pay-sistems__icons 
+            <svg width="43" height="28" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#mastercard'></use> 
+            </svg>
+            <svg width="77" height="25" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#visa'></use> 
+            </svg>
+            <svg width="31" height="30" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#sberbank'></use> 
+            </svg>
+            <svg width="30" height="33" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#yandex'></use> 
+            </svg>
+            <svg width="73" height="30" class="icon">
+              <use xlink:href='./assets/svg/svg_sprite.svg#qiwi'></use> 
+            </svg>
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .uni-input.uni-input--dark
+          |
+          |
+          input(type="text", name="", placeholder=" ").uni-input__input
+          |
+          |
+          .uni-input__placeholder Placeholder
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24"  >
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--dark'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-show-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--dark'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .uni-input.uni-input--dark
+          |
+          |
+          input(type="text", name="", placeholder=" ").uni-input__input.invalid
+          |
+          |
+          .uni-input__placeholder Invalid
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24"  >
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--dark'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-show-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--dark'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .uni-input.uni-input--dark
+          |
+          |
+          input(type="password", name="", placeholder=" ").uni-input__input
+          |
+          |
+          .uni-input__placeholder Password
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24"  >
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+              </svg>
+            |
+            |
+            button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--dark'></use> 
+              </svg>
+            |
+            |
+            button.icon-show-pass.dn
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--dark'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .uni-input.uni-input--dark
+          |
+          |
+          input(type="text", name="", placeholder=" ", disabled).uni-input__input
+          |
+          |
+          .uni-input__placeholder Disabled
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24"  >
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li.bg-white
+        |
+        |
+        .uni-input.uni-input--white
+          |
+          |
+          input(type="text", name="", placeholder=" ").uni-input__input
+          |
+          |
+          .uni-input__placeholder Placeholder 
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-show-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li.bg-white
+        |
+        |
+        .uni-input.uni-input--white
+          |
+          |
+          input(type="text", name="", placeholder=" ").uni-input__input.invalid
+          |
+          |
+          .uni-input__placeholder Invalid 
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+              </svg>
+            |
+            |
+            //-button.icon-show-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li.bg-white
+        |
+        |
+        .uni-input.uni-input--white
+          |
+          |
+          input(type="password", name="", placeholder=" ").uni-input__input
+          |
+          |
+          .uni-input__placeholder Password 
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+              </svg>
+            |
+            |
+            button.icon-hide-pass
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+              </svg>
+            |
+            |
+            button.icon-show-pass.dn
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+              </svg> 
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li.bg-white
+        |
+        |
+        .uni-input.uni-input--white
+          |
+          |
+          input(type="text", name="", placeholder=" ", disabled).uni-input__input
+          |
+          |
+          .uni-input__placeholder Disabled 
+          |
+          |
+          .uni-input__wrap-icons   
+            |
+            |
+            button.icon-clear
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+              </svg> 
+            |
+            |
+            button.icon-wrong
+              <svg width="24" height="24">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+              </svg>
+            |
+            | 
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .clip-input 
+          input(type="text", name="", placeholder="Placeholder")
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        | 222
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        | 222
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        | 222
+        |
+        |
+      |
+      |
+    |
+    |   
+  |
+  | 
