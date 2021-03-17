@@ -5,8 +5,26 @@
   position: relative;
   text-decoration: none;
   color: $color-primary-green;
+  transition: all 0.3s;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.link--red {
+  @extend .link;
+
+  color: #e93745;
+}
+
+.link--transparent {
+  @extend .link;
+
+  color: #ffffff;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
   }
 }

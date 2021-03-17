@@ -7,7 +7,8 @@ mixin tabs(args)
     |
     |
     each item in args.array
-      button.tabs__item(class=item.class)=item.text
+      button.tabs__item(class=item.class 
+      data-toggle=item.datatoggle ? item.datatoggle : null)=item.text
     |
     | 
 

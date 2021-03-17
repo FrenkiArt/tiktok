@@ -1,0 +1,335 @@
+//- src/views/components/popup/popup.pug
+|
+|
+.overlay
+|
+|
+.popup.popup-login 
+  |
+  |
+  +tabs({
+    class: 'skin-red', 
+    array: [{class: 'active', text: 'Вход', datatoggle: '.form-login'},
+            {class: '', text: 'Регистрация', datatoggle: '.form-registration'}]
+  })
+  |
+  |
+  form(action="#" data-tabelement).form.form-login
+    |
+    |
+    .form__row
+      |
+      |
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="email", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder E-mail 
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          | 
+        |
+        |
+      |
+      | 
+    |
+    |
+    .form__row
+      |
+      |
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="password", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder Пароль 
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          |
+          button.icon-hide-pass
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+            </svg>
+          |
+          |
+          button.icon-show-pass.dn
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+            </svg> 
+          |
+          |
+        |
+        |
+      |
+      | 
+    |
+    |
+    .form__row.last
+      |
+      |
+      +btn({
+        type: 'submit',
+        class: 'btn width-122px',
+        text: 'Вход'
+      })
+      |
+      |
+      a(href="#" id="open-popup-forgot-password").link--red Забыли пароль?
+      |
+      |
+    |
+    |
+  |
+  |
+  form(action="#" data-tabelement).form.form-registration.dn
+    |
+    |
+    .form__row
+      |
+      |
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="text", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder Никнейм
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          | 
+        |
+        | 
+      |
+      |
+    |
+    |
+    .form__row
+      |
+      | 
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="email", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder E-mail 
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          | 
+        |
+        |
+      |
+      | 
+    |
+    |
+    .form__row
+      |
+      |
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="password", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder Пароль 
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          |
+          button.icon-hide-pass
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+            </svg>
+          |
+          |
+          button.icon-show-pass.dn
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+            </svg> 
+          |
+          |
+        |
+        |
+      |
+      | 
+    |
+    |
+    .form__row.last
+      |
+      |
+      +btn({
+        type: 'submit',
+        class: 'btn width-100',
+        text: 'Зарегистрироваться'
+      })
+      |
+      | 
+    |
+    |
+  |
+  | 
+|
+|
+.popup.popup-forget-password
+  |
+  |
+  .h3.popup__title Забыли пароль?
+  |
+  |
+  form(action="#").form.form-forget-password
+    |
+    |
+    .form__row
+      |
+      | 
+      .uni-input.uni-input--white
+        |
+        |
+        input(type="email", name="", placeholder=" ").uni-input__input
+        |
+        |
+        .uni-input__placeholder E-mail 
+        |
+        |
+        .uni-input__wrap-icons   
+          |
+          |
+          button.icon-clear
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+            </svg> 
+          |
+          |
+          button.icon-wrong
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+            </svg>
+          |
+          | 
+        |
+        |
+      |
+      | 
+    |
+    |
+    .form__row.last
+      |
+      |
+      +btn({
+        type: 'submit',
+        class: 'btn',
+        text: 'Восстановить'
+      })
+      |
+      |
+      a(href="#" id="open-popup-login").link--red Войти?
+      |
+      |
+    |
+    |
+  |
+  |
+|
+|
+.popup.popup-sent-password
+  |
+  |
+  .h3.popup__title На вашу почту отправлен новый пароль
+  |
+  |
+  .popup__text Используйте его для входа
+  |
+  |
+  +btn({
+    type: 'button',
+    class: 'btn width-154px close-popup',
+    text: 'Супер!'
+  })
+  |
+  |
+|
+|
+// popup template
+.popup
+  |
+  |
+  button.popup__btn-close
+
+  |
+  |
+|
+|
+//-data-popup=".popup_target")
+//-.close-popup

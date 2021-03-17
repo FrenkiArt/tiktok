@@ -10,6 +10,15 @@
     height: $footer-h;
     display: flex;
     align-items: center;
+
+    @media screen and(max-width: 1600px) {
+      max-width: calc(100% - 60px);
+    }
+
+    @media screen and(max-width: 800px) {
+      flex-direction: column;
+      max-width: calc(100% - 32px);
+    }
   }
 
   // .footer__separator
@@ -19,6 +28,16 @@
     background-color: $color-primary-green;
     border-radius: 2px;
     margin: 0 0 0 200px;
+
+    @media screen and(max-width: 1200px) {
+      margin: 0 0 0 50px;
+    }
+
+    @media screen and(max-width: 800px) {
+      margin: 20px auto 30px;
+      width: 192px;
+      height: 1px;
+    }
   }
 
   // .footer__lines
@@ -30,8 +49,17 @@
   &__line {
     color: rgba(255, 255, 255, 0.6);
 
+    @media screen and(max-width: 800px) {
+      text-align: center;
+    }
+
     .small-text {
       margin-right: 24px;
+
+      @media screen and(max-width: 800px) {
+        margin-right: 0;
+        display: block;
+      }
     }
   }
 

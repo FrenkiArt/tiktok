@@ -136,13 +136,16 @@
       }
     }
 
-    &:active {
+    &:active,
+    &.active {
       border: 1px solid #5bcad2;
     }
 
+    &:disabled,
     &:disabled {
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: rgba(255, 255, 255, 0.2);
+      pointer-events: none;
 
       & ~ .uni-input__placeholder {
         color: rgba(255, 255, 255, 0.2);
@@ -165,7 +168,7 @@
 .uni-input--white {
   .uni-input__input {
     color: #000000;
-    border: 1px solid #4f4f4f;
+    border: 1px solid rgba(79, 79, 79, 0.5);
 
     &:hover {
       border: 1px solid #1a2442;

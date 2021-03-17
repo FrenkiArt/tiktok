@@ -6,6 +6,7 @@
     "node": true
   },
   "rules": {
+    "space-before-function-paren": 0,
     "linebreak-style": 0,
     "indent": 0
     // "max-len": 0

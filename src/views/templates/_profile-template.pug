@@ -1,4 +1,4 @@
-//- _template layout 
+//- _profile-template layout 
 
 doctype html
 html(lang='ru')
@@ -44,25 +44,25 @@ html(lang='ru')
       }
   |
   |
-  body
+  body.bg-060F23
     include ../components/buttons/button.pug 
     include ../components/tabs/tabs.pug 
     include ../mixins/mixins.pug 
     |
     |
     // Header
-    include ../components/header/header.pug
+    include ../components/header/header-inner-profile.pug
     // Header/
     |
     |  
-    .wrap-main
+    .wrap-inner
       //- block content
       block content 
     |
     |
-    // Footer
+    //- Footer
     include ../components/footer/footer.pug
-    // Footer/
+    //- Footer/
     |
     |
     include ../components/popup/popup.pug

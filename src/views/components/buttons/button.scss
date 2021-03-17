@@ -31,6 +31,8 @@ button {
   position: relative;
   height: 48px;
   z-index: 2;
+  transition: all 0.3s;
+  text-decoration: none;
 
   &::before {
     content: '';
@@ -237,6 +239,55 @@ button {
 
   &::after {
     display: none;
+  }
+}
+
+.btn-form {
+  @extend .btn;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #000000;
+  width: 100%;
+  border: 1px solid #ffffff;
+
+  &:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.btn-transparent {
+  @extend .btn;
+
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $color-secodary-blue;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  @media screen and(max-width: 640px) {
+    border: 1px solid #ffffff;
   }
 }
 

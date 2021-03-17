@@ -12,7 +12,7 @@ mixin navLink(link, name, last)
     else
       a(href=link).nav-link=name
 
-// Radio button
+//- Radio button
 mixin radio(args) 
     .radio(id=attributes.id ? attributes.id : null, class=attributes.class ? attributes.class : null): label
       input(
@@ -34,7 +34,7 @@ mixin field(args)
     id=attributes.id ? attributes.id : null
   )
   
-// - Button
+//- Button
 mixin button(args)
   button.btn(
     type=args.type ? args.type : 'button'
@@ -105,3 +105,18 @@ mixin load-more(text)
       <use xlink:href='./assets/svg/svg_sprite.svg#icon-load'></use> 
     </svg>
     .load-more__text=text
+
+mixin wallet-info(args)
+  a(href="#").wallet-info 
+    .wallet-info__amount=args.amount
+    .wallet-info__symbol ₽
+    .wallet-info__icon 
+      <svg width="17" height="16">
+        <use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon'></use> 
+      </svg>
+
+mixin btn-menu(args)
+  button.btn-menu
+    span 
+    span 
+    span 

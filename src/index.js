@@ -28,6 +28,8 @@ import './views/components/tabs/tabs.js';
 import './views/components/input/input.scss';
 import './views/components/input/input.js';
 import './views/components/pagination/pagination.scss';
+import './views/components/popup/popup.scss';
+import {myPopup} from './views/components/popup/popup.js';
 import './views/mixins/mixins.scss';
 
 // Страницы
@@ -59,5 +61,67 @@ const fullPageInstance = new fullpage('#fullpage', {
   // fixedElements: '#header, #footer',
   // sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', 'grey'],
 });
+
+/* Про Попапы */
+if (document.querySelector('[data-popup]')) {
+  myPopup(document.querySelectorAll('[data-popup]'));
+}
+
+if (document.querySelector('#open-popup-login')) {
+  document
+    .querySelector('#open-popup-login')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      window.closeAllPopup();
+      window.showOverlay();
+      window.openPopup('.popup-login');
+    });
+}
+
+if (document.querySelector('#open-popup-forgot-password')) {
+  document
+    .querySelector('#open-popup-forgot-password')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      window.closeAllPopup();
+      window.showOverlay();
+      window.openPopup('.popup-forget-password');
+    });
+}
+
+if (document.querySelector('#change-profile-info')) {
+  document
+    .querySelector('#change-profile-info')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector('#form-profile-readonly').classList.add('dn');
+      document.querySelector('.profile-cart__last-line').classList.add('dn');
+      document.querySelector('.profile-cart__title').classList.add('dn');
+      document.querySelector('#form-profile-live').classList.remove('dn');
+      document.querySelector('.list-actions').classList.remove('dn');
+    });
+}
+
+if (document.querySelector('#cancel-form-profile-live')) {
+  document
+    .querySelector('#cancel-form-profile-live')
+    .addEventListener('click', cancelFormProfileLive);
+}
+
+/**
+ * Вывел в отдельную функцию, так как возможно придётся
+ * отдельно отменять редактирование profile
+ * @param {e} e Событие клика
+ */
+function cancelFormProfileLive(e) {
+  document.querySelector('#form-profile-readonly').classList.remove('dn');
+  document.querySelector('.profile-cart__last-line').classList.remove('dn');
+  document.querySelector('.profile-cart__title').classList.remove('dn');
+  document.querySelector('#form-profile-live').classList.add('dn');
+  document.querySelector('.list-actions').classList.add('dn');
+}
 
 console.log(fullPageInstance);

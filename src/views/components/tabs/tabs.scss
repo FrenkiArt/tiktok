@@ -30,6 +30,10 @@
     line-height: 32px;
     color: #000000;
 
+    @media screen and(max-width: 800px) {
+      font-size: 20px;
+    }
+
     &:hover {
       color: #e93745;
     }

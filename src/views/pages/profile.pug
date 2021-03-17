@@ -1,0 +1,315 @@
+extends ../templates/_profile-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-profile 
+    |
+    | 
+    .profile-cart 
+      |
+      |
+      .profile-cart__wrap-avatar 
+        |
+        |
+        .page-profile__avatar 
+          |
+          |
+          .wrap-img  
+            img(src="assets/images/big-ava.jpg", alt="", loading="lazy")
+          |
+          |
+          .list-actions.dn
+            |
+            |
+            a(href="#").change
+              <svg width="18" height="18">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-pen'></use> 
+              </svg>
+              span Изменить
+            |
+            |
+            a(href="#").delete
+              <svg width="18" height="16">
+                <use xlink:href='./assets/svg/svg_sprite.svg#icon-trash'></use> 
+              </svg>
+              span Удалить
+            |
+            |
+        |
+        |
+        .h4.profile-cart__title Kevin Systrom
+        |
+        |
+      |
+      |
+      .profile-cart__wrap-form 
+        |
+        |
+        form(action="#" id="form-profile-readonly").form.form-profile
+          |
+          |
+          .form__row
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="text", name="", placeholder=" ", value="342kevin@mail.ru", readonly).uni-input__input.active
+              |
+              |
+              .uni-input__placeholder Логин 
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                //button.icon-clear
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                  </svg> 
+                |
+                |
+                //button.icon-wrong
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                  </svg>
+                |
+                | 
+              |
+              |
+            |
+            | 
+          |
+          |
+          .form__row
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="password", name="", placeholder=" ", value="jdncnN432mkd", readonly).uni-input__input.active
+              |
+              |
+              .uni-input__placeholder Пароль 
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                //button.icon-clear
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                  </svg> 
+                |
+                |
+                //button.icon-wrong
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                  </svg>
+                |
+                |
+                //button.icon-hide-pass
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--dark'></use> 
+                  </svg>
+                |
+                |
+                //button.icon-show-pass.dn
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--dark'></use> 
+                  </svg> 
+                |
+                |
+              |
+              |
+            |
+            | 
+          |
+          |
+          .form__row.last
+            |
+            |
+            button(
+              type="button"
+              class="btn-form"  
+              id="change-profile-info"
+            ) 
+              span Изменить
+            |
+            | 
+          |
+          |
+        |
+        |
+        form(action="#" id="form-profile-live").form.form-profile.dn
+          |
+          |
+          .form__row
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="text", name="", placeholder=" ", value="Kevin Systrom").uni-input__input.active
+              |
+              |
+              .uni-input__placeholder Никнейм 
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                button.icon-clear
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                  </svg> 
+                |
+                |
+                button.icon-wrong
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                  </svg>
+                |
+                | 
+              |
+              |
+            |
+            | 
+          |
+          |
+          .form__row
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="text", name="", placeholder=" ", value="342kevin@mail.ru").uni-input__input.active
+              |
+              |
+              .uni-input__placeholder Логин 
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                button.icon-clear
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                  </svg> 
+                |
+                |
+                button.icon-wrong
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                  </svg>
+                |
+                | 
+              |
+              |
+            |
+            | 
+          |
+          |
+          .form__row
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="password", name="", placeholder=" ", value="jdncnN432mkd").uni-input__input.active
+              |
+              |
+              .uni-input__placeholder Пароль 
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                button.icon-clear
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                  </svg> 
+                |
+                |
+                button.icon-wrong
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                  </svg>
+                |
+                |
+                button.icon-hide-pass
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--dark'></use> 
+                  </svg>
+                |
+                |
+                button.icon-show-pass.dn
+                  <svg width="24" height="24">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--dark'></use> 
+                  </svg> 
+                |
+                |
+              |
+              |
+            |
+            |  
+          |
+          |
+          .form__row.last
+            |
+            |
+            +btn({
+              type: 'submit',
+              class: 'btn',
+              text: 'Сохранить'
+            })
+            |
+            |
+            button(
+              type="button"
+              class="btn-transparent"  
+              id="cancel-form-profile-live" 
+            ) 
+              span Отмена
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      .profile-cart__last-line 
+        |
+        |
+        a(href="./").profile-cart__exit
+          |
+          | 
+          <svg width="21" height="26" class="icon">
+            <use xlink:href='./assets/svg/svg_sprite.svg#icon-exit'></use> 
+          </svg> 
+          |
+          |
+          .text Выход
+          |
+          |
+        |
+        |
+        a(href="./").link--transparent Удалить аккаунт
+        |
+        |
+      |
+      |
+    |
+    |
+  |
+  |

@@ -18,6 +18,16 @@ function tabClickHandler(e) {
     parent.querySelector('.active').classList.remove('active');
     e.target.classList.add('active');
   }
+
+  if (e.target.dataset.toggle) {
+    const wrapper = parent.parentElement;
+
+    wrapper.querySelectorAll('[data-tabelement]').forEach((element) => {
+      element.classList.add('dn');
+    });
+
+    wrapper.querySelector(e.target.dataset.toggle).classList.remove('dn');
+  }
 }
 
 // Меню у нас работает аналогично таберу

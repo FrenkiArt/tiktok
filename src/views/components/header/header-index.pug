@@ -8,7 +8,8 @@ header#header.header.header-index
     |
     |
     a(href="./" title="Главная").logo
-      img(src="assets/svg/header-logo.svg", alt="" loading="lazy")
+      img(src="assets/svg/header-logo-star.svg", alt="" loading="lazy").logo__img
+      .logo__text Tit-tok vzlom
     |
     |
     ul.menu-list#myMenu
@@ -48,12 +49,12 @@ header#header.header.header-index
       |   
     |
     |
-    +btn-red({
-      type: 'button',
-      class: 'btn-red',
-      text: 'Личный кабинет',
-      disabled: null
-    })
+    button(
+      type="button"
+      class="btn-red" 
+      data-popup=".popup-login"
+    ) 
+      span Личный кабинет 
     |
     |
   |
