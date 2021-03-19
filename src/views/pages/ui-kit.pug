@@ -647,6 +647,14 @@ block content
       li
         |
         |
+        +wallet-info({amount: 352, class: 'active'})
+        |
+        |
+      |
+      |
+      li
+        |
+        |
         +btn-menu() 
         |
         |
@@ -756,7 +764,7 @@ block content
       li
         |
         |
-        | 222
+        .load-line.load-25
         |
         |
       |
@@ -764,7 +772,7 @@ block content
       li
         |
         |
-        | 222
+        .load-line.load-50
         |
         |
       |
@@ -772,7 +780,227 @@ block content
       li
         |
         |
-        | 222
+        .load-line.load-75
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .load-line.load-100
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        | window.makeLoadLine(100, 4);
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .line-attention 
+          |
+          |
+          a(href="#").active
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#attention-icon'></use> 
+            </svg> 
+          |
+          |
+          a(href="#") 
+            <svg width="26" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#quest-icon'></use> 
+            </svg>  
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .payment-block 
+          |
+          |
+          .payment-block__row 
+            |
+            |
+            .my-select--dark
+              +select({
+                title: 'Список белый'
+              })
+            |
+            |
+          |
+          |
+          .payment-block__row.last
+            |
+            |
+            .uni-input.uni-input--dark
+              |
+              |
+              input(type="number", name="", placeholder=" ").uni-input__input 
+              |
+              |
+              .uni-input__placeholder Сумма
+              |
+              |
+              .uni-input__wrap-icons   
+                |
+                |
+                .ruble ₽
+                |
+                |
+              |
+              |
+            |
+            |
+            +btn({
+              type: 'button',
+              class: 'btn--white',
+              text: 'Перейти к оплате',
+              disabled: null
+            })
+            |
+            |
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .my-select--white
+          +select({
+            title: 'Список белый'
+          })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .my-select--dark 
+          +select({
+            title: 'Список тёмный'
+          })
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        button.btn--look 
+          span Смотреть
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .user-info
+          |
+          | 
+          .user-info__wrap-ava 
+            |
+            |
+            .wrap-avatar 
+              img(src="assets/images/big-ava.jpg", alt="", loading="lazy")
+            |
+            |
+            .h4.user-info__title Kevin Systrom
+            |
+            |
+          .user-info__wrap-list
+            |
+            |
+            ul.user-info__list
+              li 
+                .item Логин
+                .lines 
+                .status Не оплачено
+              li 
+                .item Пароль
+                .lines 
+                .status Не оплачено
+            |
+            |
+            .small-text Логин и пароль вы получите сразу после оплаты
+            |
+            |
+          .user-info__wrap-payment
+            |
+            |
+            .payment-block 
+              |
+              |
+              .payment-block__row 
+                |
+                |
+                .my-select--dark
+                  +select({
+                    title: 'Способы оплаты'
+                  })
+                |
+                |
+              |
+              |
+              .payment-block__row.last
+                |
+                |
+                .uni-input.uni-input--dark
+                  |
+                  |
+                  input(type="number", name="", placeholder=" ").uni-input__input 
+                  |
+                  |
+                  .uni-input__placeholder Сумма
+                  |
+                  |
+                  .uni-input__wrap-icons   
+                    |
+                    |
+                    .ruble ₽
+                    |
+                    |
+                  |
+                  |
+                |
+                |
+                +btn({
+                  type: 'button',
+                  class: 'btn--white',
+                  text: 'Перейти к оплате',
+                  disabled: null
+                })
+                |
+                |
+              |
+              |
+            |
+            | 
+          |
+          |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+         
         |
         |
       |

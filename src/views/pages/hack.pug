@@ -1,0 +1,78 @@
+extends ../templates/_inner-hack-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-hack
+    |
+    |
+    .page-hack__form 
+      |
+      |
+      form(action="#").form.form-hack
+        |
+        |
+        .form__row 
+          |
+          |
+          .uni-input.uni-input--dark
+            |
+            |
+            input(type="url", name="", placeholder="Адрес страницы").uni-input__input
+            |
+            |
+            //-.uni-input__placeholder Адрес страницы
+            |
+            |
+            //-.uni-input__wrap-icons   
+              |
+              |
+              button.icon-clear
+                <svg width="24" height="24"  >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--dark'></use> 
+                </svg> 
+              |
+              |
+              button.icon-wrong
+                <svg width="24" height="24">
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--dark'></use> 
+                </svg>
+              |
+              |  
+            |
+            |
+          |
+          |
+        |
+        | 
+        .form__row.last
+          +btn({
+            type: 'submit',
+            class: 'btn--white',
+            text: 'Получить данные',
+            disabled: null
+          })
+        |
+        | 
+      |
+      |
+    |
+    |
+    .page-hack__wrap-img
+      |
+      | 
+      img(src="assets/svg/hack-img.svg", alt="", loading="lazy").img
+      |
+      |
+    |
+    |
+  |
+  |

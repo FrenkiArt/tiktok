@@ -1,0 +1,559 @@
+extends ../templates/_inner-available-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-available
+    |
+    |
+    .page-available__main
+      |
+      |
+      .h2.page-available__title Доступные аккаунты
+      |
+      |
+      table.uni-table.available-table 
+        tr 
+          th.id Идентификатор
+          th.user Пользователь
+          th.data Данные
+          th.date Дата 
+          th.last 
+          th.info 
+        tr 
+          td.id Kevin
+          td.user
+            .user-block
+              .user-block__wrap-img 
+                img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+              .user-block__name Kevin Systrom
+          td.data 593 MB
+          td.date 24.10.2020, 13:22:45
+          td.look.last 
+            button.btn--look 
+              span Смотреть
+              .arrow
+          td.info 
+            |
+            |
+            .user-info
+              |
+              | 
+              .user-info__wrap-ava 
+                |
+                |
+                .wrap-avatar 
+                  img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                |
+                |
+                .h4.user-info__title Kevin Systrom
+                |
+                |
+              .user-info__wrap-list
+                |
+                |
+                ul.user-info__list
+                  li 
+                    .item Логин
+                    .lines 
+                    .status Не оплачено
+                  li 
+                    .item Пароль
+                    .lines 
+                    .status Не оплачено
+                |
+                |
+                .small-text Логин и пароль вы получите сразу после оплаты
+                |
+                |
+              .user-info__wrap-payment
+                |
+                |
+                .payment-block 
+                  |
+                  |
+                  .payment-block__row 
+                    |
+                    |
+                    .my-select--dark
+                      +select({
+                        title: 'Способы оплаты'
+                      })
+                    |
+                    |
+                  |
+                  |
+                  .payment-block__row.last
+                    |
+                    |
+                    .uni-input.uni-input--dark
+                      |
+                      |
+                      input(type="number", name="", placeholder=" ").uni-input__input 
+                      |
+                      |
+                      .uni-input__placeholder Сумма
+                      |
+                      |
+                      .uni-input__wrap-icons   
+                        |
+                        |
+                        .ruble ₽
+                        |
+                        |
+                      |
+                      |
+                    |
+                    |
+                    +btn({
+                      type: 'button',
+                      class: 'btn--white',
+                      text: 'Перейти к оплате',
+                      disabled: null
+                    })
+                    |
+                    |
+                  |
+                  |
+                |
+                | 
+              |
+              |
+            |
+            |
+        tr 
+          td.id Kevin
+          td.user
+            .user-block
+              .user-block__wrap-img 
+                img(src="assets/images/user-pic-2.jpg", alt="", loading="lazy")
+              .user-block__name Kevin Systrom 2
+          td.data 593 MB
+          td.date 24.10.2020, 13:22:45
+          td.look.last 
+            button.btn--look 
+              span Смотреть
+              .arrow
+          td.info
+            |
+            |
+            .user-info
+              |
+              | 
+              .user-info__wrap-ava 
+                |
+                |
+                .wrap-avatar 
+                  img(src="assets/images/user-pic-2.jpg", alt="", loading="lazy")
+                |
+                |
+                .h4.user-info__title Kevin Systrom 2
+                |
+                |
+              .user-info__wrap-list
+                |
+                |
+                ul.user-info__list
+                  li 
+                    .item Логин
+                    .lines 
+                    .status Не оплачено
+                  li 
+                    .item Пароль
+                    .lines 
+                    .status Не оплачено
+                |
+                |
+                .small-text Логин и пароль вы получите сразу после оплаты
+                |
+                |
+              .user-info__wrap-payment
+                |
+                |
+                .payment-block 
+                  |
+                  |
+                  .payment-block__row 
+                    |
+                    |
+                    .my-select--dark
+                      +select({
+                        title: 'Способы оплаты'
+                      })
+                    |
+                    |
+                  |
+                  |
+                  .payment-block__row.last
+                    |
+                    |
+                    .uni-input.uni-input--dark
+                      |
+                      |
+                      input(type="number", name="", placeholder=" ").uni-input__input 
+                      |
+                      |
+                      .uni-input__placeholder Сумма
+                      |
+                      |
+                      .uni-input__wrap-icons   
+                        |
+                        |
+                        .ruble ₽
+                        |
+                        |
+                      |
+                      |
+                    |
+                    |
+                    +btn({
+                      type: 'button',
+                      class: 'btn--white',
+                      text: 'Перейти к оплате',
+                      disabled: null
+                    })
+                    |
+                    |
+                  |
+                  |
+                |
+                | 
+              |
+              |
+            |
+            |
+        tr 
+          td.id Kevin
+          td.user
+            .user-block
+              .user-block__wrap-img 
+                img(src="assets/images/user-pic-3.jpg", alt="", loading="lazy")
+              .user-block__name Kevin Systrom 3
+          td.data 593 MB
+          td.date 24.10.2020, 13:22:45
+          td.look.last 
+            button.btn--look 
+              span Смотреть
+              .arrow
+          td.info
+            |
+            |
+            .user-info
+              |
+              | 
+              .user-info__wrap-ava 
+                |
+                |
+                .wrap-avatar 
+                  img(src="assets/images/user-pic-3.jpg", alt="", loading="lazy")
+                |
+                |
+                .h4.user-info__title Kevin Systrom 3
+                |
+                |
+              .user-info__wrap-list
+                |
+                |
+                ul.user-info__list
+                  li 
+                    .item Логин
+                    .lines 
+                    .status Не оплачено
+                  li 
+                    .item Пароль
+                    .lines 
+                    .status Не оплачено
+                |
+                |
+                .small-text Логин и пароль вы получите сразу после оплаты
+                |
+                |
+              .user-info__wrap-payment
+                |
+                |
+                .payment-block 
+                  |
+                  |
+                  .payment-block__row 
+                    |
+                    |
+                    .my-select--dark
+                      +select({
+                        title: 'Способы оплаты'
+                      })
+                    |
+                    |
+                  |
+                  |
+                  .payment-block__row.last
+                    |
+                    |
+                    .uni-input.uni-input--dark
+                      |
+                      |
+                      input(type="number", name="", placeholder=" ").uni-input__input 
+                      |
+                      |
+                      .uni-input__placeholder Сумма
+                      |
+                      |
+                      .uni-input__wrap-icons   
+                        |
+                        |
+                        .ruble ₽
+                        |
+                        |
+                      |
+                      |
+                    |
+                    |
+                    +btn({
+                      type: 'button',
+                      class: 'btn--white',
+                      text: 'Перейти к оплате',
+                      disabled: null
+                    })
+                    |
+                    |
+                  |
+                  |
+                |
+                | 
+              |
+              |
+            |
+            |
+        tr 
+          td.id Kevin
+          td.user
+            .user-block
+              .user-block__wrap-img 
+                img(src="assets/images/user-pic-4.jpg", alt="", loading="lazy")
+              .user-block__name Kevin Systrom 4
+          td.data 593 MB
+          td.date 24.10.2020, 13:22:45
+          td.look.last 
+            button.btn--look 
+              span Смотреть
+              .arrow
+          td.info
+            |
+            |
+            .user-info
+              |
+              | 
+              .user-info__wrap-ava 
+                |
+                |
+                .wrap-avatar 
+                  img(src="assets/images/user-pic-4.jpg", alt="", loading="lazy")
+                |
+                |
+                .h4.user-info__title Kevin Systrom 4
+                |
+                |
+              .user-info__wrap-list
+                |
+                |
+                ul.user-info__list
+                  li 
+                    .item Логин
+                    .lines 
+                    .status Не оплачено
+                  li 
+                    .item Пароль
+                    .lines 
+                    .status Не оплачено
+                |
+                |
+                .small-text Логин и пароль вы получите сразу после оплаты
+                |
+                |
+              .user-info__wrap-payment
+                |
+                |
+                .payment-block 
+                  |
+                  |
+                  .payment-block__row 
+                    |
+                    |
+                    .my-select--dark
+                      +select({
+                        title: 'Способы оплаты'
+                      })
+                    |
+                    |
+                  |
+                  |
+                  .payment-block__row.last
+                    |
+                    |
+                    .uni-input.uni-input--dark
+                      |
+                      |
+                      input(type="number", name="", placeholder=" ").uni-input__input 
+                      |
+                      |
+                      .uni-input__placeholder Сумма
+                      |
+                      |
+                      .uni-input__wrap-icons   
+                        |
+                        |
+                        .ruble ₽
+                        |
+                        |
+                      |
+                      |
+                    |
+                    |
+                    +btn({
+                      type: 'button',
+                      class: 'btn--white',
+                      text: 'Перейти к оплате',
+                      disabled: null
+                    })
+                    |
+                    |
+                  |
+                  |
+                |
+                | 
+              |
+              |
+            |
+            |
+        tr 
+          td.id Kevin
+          td.user
+            .user-block
+              .user-block__wrap-img 
+                img(src="assets/images/user-pic-5.jpg", alt="", loading="lazy")
+              .user-block__name Kevin Systrom 5
+          td.data 593 MB
+          td.date 24.10.2020, 13:22:45
+          td.look.last 
+            button.btn--look 
+              span Смотреть
+              .arrow
+          td.info
+            |
+            |
+            .user-info
+              |
+              | 
+              .user-info__wrap-ava 
+                |
+                |
+                .wrap-avatar 
+                  img(src="assets/images/user-pic-5.jpg", alt="", loading="lazy")
+                |
+                |
+                .h4.user-info__title Kevin Systrom 5
+                |
+                |
+              .user-info__wrap-list
+                |
+                |
+                ul.user-info__list
+                  li 
+                    .item Логин
+                    .lines 
+                    .status Не оплачено
+                  li 
+                    .item Пароль
+                    .lines 
+                    .status Не оплачено
+                |
+                |
+                .small-text Логин и пароль вы получите сразу после оплаты
+                |
+                |
+              .user-info__wrap-payment
+                |
+                |
+                .payment-block 
+                  |
+                  |
+                  .payment-block__row 
+                    |
+                    |
+                    .my-select--dark
+                      +select({
+                        title: 'Способы оплаты'
+                      })
+                    |
+                    |
+                  |
+                  |
+                  .payment-block__row.last
+                    |
+                    |
+                    .uni-input.uni-input--dark
+                      |
+                      |
+                      input(type="number", name="", placeholder=" ").uni-input__input 
+                      |
+                      |
+                      .uni-input__placeholder Сумма
+                      |
+                      |
+                      .uni-input__wrap-icons   
+                        |
+                        |
+                        .ruble ₽
+                        |
+                        |
+                      |
+                      |
+                    |
+                    |
+                    +btn({
+                      type: 'button',
+                      class: 'btn--white',
+                      text: 'Перейти к оплате',
+                      disabled: null
+                    })
+                    |
+                    |
+                  |
+                  |
+                |
+                | 
+              |
+              |
+            |
+            |
+      |
+      |
+      +load-more("Загрузить ещё")
+      |
+      |
+    |
+    |
+    .page-available__aside
+      |
+      |
+      .page-available__rainbow
+        .wrap-text
+          .text-1 Все
+          .text-2 что нужно
+          .text-3 здесь!
+      |
+      |   
+      img(src="assets/svg/available-hand.svg", alt="", loading="lazy").page-available__hand
+      |
+      |
+    |
+    |
+  |
+  |

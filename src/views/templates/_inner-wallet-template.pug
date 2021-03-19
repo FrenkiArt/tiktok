@@ -1,4 +1,4 @@
-//- _index-template layout 
+//- _inner-template layout 
 
 doctype html
 html(lang='ru')
@@ -44,26 +44,26 @@ html(lang='ru')
       }
   |
   |
-  body
+  body.bg-060F23
     include ../components/buttons/button.pug 
     include ../components/tabs/tabs.pug 
     include ../components/select/select.pug 
-    include ../mixins/mixins.pug  
+    include ../mixins/mixins.pug 
     |
     |
     // Header
-    include ../components/header/header-ui-kit.pug
+    include ../components/header/header-inner-wallet.pug
     // Header/
     |
     |  
-    .wrap-main
+    .wrap-inner
       //- block content
       block content 
     |
     |
-    // Footer
+    //- Footer
     include ../components/footer/footer.pug
-    // Footer/
+    //- Footer/
     |
     |
     include ../components/popup/popup.pug

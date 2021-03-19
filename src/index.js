@@ -3,6 +3,8 @@ import 'normalize.css';
 import '../node_modules/svgxuse/svgxuse.min.js';
 import fullpage from 'fullpage.js';
 // import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
+import customSelect from 'custom-select';
+import '../node_modules/custom-select/build/custom-select.css';
 
 import '../node_modules/fullpage.js/dist/fullpage.min.css';
 
@@ -29,6 +31,8 @@ import './views/components/input/input.scss';
 import './views/components/input/input.js';
 import './views/components/pagination/pagination.scss';
 import './views/components/popup/popup.scss';
+import './views/components/select/select.scss';
+import './views/components/select/select.js';
 import {myPopup} from './views/components/popup/popup.js';
 import './views/mixins/mixins.scss';
 
@@ -123,5 +127,62 @@ function cancelFormProfileLive(e) {
   document.querySelector('#form-profile-live').classList.add('dn');
   document.querySelector('.list-actions').classList.add('dn');
 }
+
+if (document.querySelector('.load-line')) {
+  window.makeLoadLine = function (arg, arg2) {
+    makeLoadLine(arg, arg2);
+  };
+}
+
+/**
+ * Сделаем линию загрузки
+ * @param {string} arg Строка со значением на которое надо сделать линию
+ * @param {string} arg2 Время на анимацию
+ */
+function makeLoadLine(arg, arg2) {
+  document.querySelector('.load-line').style.transition = arg2 + 's';
+  document.querySelector('.load-line').style.transform =
+    'scaleX(' + arg / 100 + ')';
+}
+
+/* Работа с select-ами */
+customSelect('select');
+
+/* Открывашка для таблицы .available-table */
+
+if (document.querySelector('.available-table .btn--look')) {
+  document
+    .querySelectorAll('.available-table .btn--look')
+    .forEach((element) => {
+      element.addEventListener('click', function (e) {
+        // const btnLook = e.target.closest('.btn--look');
+        const rowParent = e.target.closest('tr');
+        const isOpenTr = rowParent.classList.contains('open');
+        const asideBlock = document.querySelector('.page-available__aside');
+        const userInfo = rowParent.querySelector('.user-info');
+
+        if (window.matchMedia('(max-width: 1000px)').matches) {
+          // do functionality on screens smaller than 768px
+        } else {
+          userInfo.style.height =
+            asideBlock.getBoundingClientRect().height + 'px';
+          userInfo.style.width =
+            asideBlock.getBoundingClientRect().width + 'px';
+        }
+
+        document.querySelectorAll('.available-table tr').forEach((tr) => {
+          if (tr == rowParent && isOpenTr) {
+            tr.classList.remove('open');
+          } else if (tr == rowParent && !isOpenTr) {
+            tr.classList.add('open');
+          } else {
+            tr.classList.remove('open');
+          }
+        });
+      });
+    });
+}
+
+// element.classList.toggle('open')
 
 console.log(fullPageInstance);

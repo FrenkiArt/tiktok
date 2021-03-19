@@ -47,6 +47,7 @@
     "baguettebox.js": "^1.11.1",
     "bideo.js": "^1.0.0",
     "cleave.js": "^1.6.0",
+    "custom-select": "^1.1.15",
     "flatpickr": "^4.6.9",
     "fullpage.js": "^3.1.0",
     "granim": "^2.0.0",

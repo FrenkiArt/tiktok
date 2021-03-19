@@ -1,0 +1,123 @@
+extends ../templates/_inner-wallet-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-wallet
+    |
+    |
+    .page-wallet__main
+      |
+      |
+      .h2.page-wallet__title История пополнения
+      |
+      |
+      table.uni-table.wallet-table 
+        tr 
+          th.id № ID
+          th.date Дата создания
+          th.status Статус
+          th.summ.last Сумма
+        tr 
+          td.id 123243
+          td.date 24.10.2020, 13:22:45
+          td.status 
+            span.payed Оплачен
+          td.summ.last 350 ₽
+        tr 
+          td.id 124241
+          td.date 24.10.2020, 13:22:45
+          td.status
+            span.no-pay Не оплачен
+          td.summ.last 350 ₽
+        tr 
+          td.id 123534
+          td.date 24.10.2020, 13:22:45
+          td.status 
+            span.payed Оплачен
+          td.summ.last 350 ₽
+        tr 
+          td.id 436345
+          td.date 24.10.2020, 13:22:45 
+          td.status 
+            span.payed Оплачен
+          td.summ.last 350 ₽
+        tr 
+          td.id 364574
+          td.date 24.10.2020, 13:22:45
+          td.status
+            span.no-pay Не оплачен
+          td.summ.last 350 ₽
+      |
+      |
+      +load-more("Загрузить ещё")
+      |
+      |
+    |
+    |
+    .page-wallet__aside
+      |
+      | 
+      .title Пополнение кошелька
+      |
+      |
+      .payment-block 
+        |
+        |
+        .payment-block__row 
+          |
+          |
+          .my-select--dark
+            +select({
+              title: 'Способ оплаты'
+            })
+          |
+          |
+        |
+        |
+        .payment-block__row.last
+          |
+          |
+          .uni-input.uni-input--dark
+            |
+            |
+            input(type="number", name="", placeholder=" ").uni-input__input 
+            |
+            |
+            .uni-input__placeholder Сумма
+            |
+            |
+            .uni-input__wrap-icons   
+              |
+              |
+              .ruble ₽
+              |
+              |
+            |
+            |
+          |
+          |
+          +btn({
+            type: 'button',
+            class: 'btn--white',
+            text: 'Перейти к оплате',
+            disabled: null
+          })
+          |
+          |
+        |
+        |
+      |
+      |
+    |
+    |
+  |
+  |

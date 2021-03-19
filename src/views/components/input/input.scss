@@ -101,6 +101,10 @@
       }
     }
 
+    .ruble {
+      margin: 0 4px;
+    }
+
     svg {
       margin: 0 4px;
     }
@@ -116,6 +120,11 @@
 
     .icon-show-pass {
     } */
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
 }
 
@@ -142,7 +151,7 @@
     }
 
     &:disabled,
-    &:disabled {
+    &.disabled {
       border: 1px solid rgba(255, 255, 255, 0.2);
       color: rgba(255, 255, 255, 0.2);
       pointer-events: none;
@@ -162,6 +171,10 @@
   .uni-input__placeholder {
     color: #8c91a0;
     background-color: #1a2442;
+  }
+
+  .ruble {
+    color: #ffffff;
   }
 }
 
@@ -186,7 +199,8 @@
       border: 1px solid #5bcad2;
     }
 
-    &:disabled {
+    &:disabled,
+    &.disabled {
       border: 1px solid #e0e0e0;
       color: #e0e0e0;
 

@@ -100,19 +100,22 @@ mixin input-group-flexible(args)
 //-}])
 
 mixin load-more(text)
-  .load-more  
+  a(href="#").load-more  
     <svg width="16" height="16" class="load-more__icon">
       <use xlink:href='./assets/svg/svg_sprite.svg#icon-load'></use> 
     </svg>
     .load-more__text=text
 
 mixin wallet-info(args)
-  a(href="#").wallet-info 
+  a(href="#" class=args.class).wallet-info 
     .wallet-info__amount=args.amount
     .wallet-info__symbol ₽
     .wallet-info__icon 
-      <svg width="17" height="16">
+      <svg width="17" height="16" class="icon-1">
         <use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon'></use> 
+      </svg>
+      <svg width="17" height="16" class="icon-2">
+        <use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon-2'></use> 
       </svg>
 
 mixin btn-menu(args)

@@ -364,3 +364,27 @@ button {
     }
   }
 }
+
+.btn--look {
+  @extend .btn;
+
+  padding: 6px 23px;
+  color: #ffffff;
+  border-radius: 50px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+
+  &:hover {
+    color: #5bcad2;
+    border: 1px solid #5bcad2;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+}
