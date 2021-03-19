@@ -183,6 +183,24 @@ if (document.querySelector('.available-table .btn--look')) {
     });
 }
 
-// element.classList.toggle('open')
+/* Работа с альтернативным меню */
+
+if (document.querySelector('.btn-menu')) {
+  document.querySelector('.btn-menu').addEventListener('click', function () {
+    document.querySelector('.alt-menu').classList.toggle('open');
+  });
+
+  document
+    .querySelector('.alt-menu__close')
+    .addEventListener('click', function () {
+      document.querySelector('.alt-menu').classList.remove('open');
+    });
+
+  document.querySelector('.alt-menu').addEventListener('click', function (e) {
+    if (e.target.classList.contains('alt-menu')) {
+      document.querySelector('.alt-menu').classList.remove('open');
+    }
+  });
+}
 
 console.log(fullPageInstance);

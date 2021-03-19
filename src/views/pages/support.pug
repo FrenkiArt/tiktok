@@ -1,0 +1,42 @@
+extends ../templates/_inner-support-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-support
+    |
+    |
+    .page-support__main 
+      |
+      |
+      .h2 Поддержка
+      |
+      |
+      .h5 У вас пока нет ни одного обращения.
+      |
+      |
+      .color-white.half-transparent.max-w-320 Если у вас возник вопрос, вы можете задать его нашим специалистам
+      |
+      | 
+      |
+      |
+      +btn-plus({
+        type: 'button',
+        class: 'btn--white btn--plus',
+        text: 'Создать запрос',
+        disabled: null
+      })
+      |
+      |
+    |
+    |
+  |
+  |

@@ -1,0 +1,80 @@
+//- src/views/components/header/header-inner-support.pug
+|
+|
+header#header.header.header-inner
+  |
+  |
+  .container
+    |
+    |
+    .wrap-logo
+      a(href="./" title="Главная").logo
+        img(src="assets/svg/header-logo-star.svg", alt="" loading="lazy").logo__img
+        .logo__text Tit-tok vzlom
+    |
+    |
+    ul.menu-list
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link(href="./hack.html")
+          span Взломать 
+          span.mobile-hide аккаунт
+        |
+        |
+      |
+      |
+      li.menu-list__item
+        |
+        |
+        a.menu-list__link(href="./available.html") 
+          span Доступные 
+          span.mobile-hide аккаунты
+        |
+        |
+      |
+      |   
+    |
+    |
+    .profile-short 
+      |
+      |
+      .line-attention 
+        |
+        |
+        a(href="#") 
+          <svg width="24" height="24">
+            <use xlink:href='./assets/svg/svg_sprite.svg#attention-icon'></use> 
+          </svg> 
+        |
+        |
+        a(href="#").active
+          <svg width="26" height="24">
+            <use xlink:href='./assets/svg/svg_sprite.svg#quest-icon'></use> 
+          </svg> 
+        |
+        |
+      |
+      |
+      +wallet-info({amount: 352}) 
+      |
+      |
+      a(href="./profile.html").short-avatar 
+        .wrap-img 
+          img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+      |
+      |
+      +btn-menu() 
+      |
+      |
+    |
+    |
+  |
+  |
+  .load-line 
+  |
+  |
+|
+|

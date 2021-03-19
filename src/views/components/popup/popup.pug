@@ -321,15 +321,182 @@
   |
 |
 |
+.alt-menu
+  |
+  |
+  button.alt-menu__close 
+    <svg width="18" height="18" >
+      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+    </svg>
+  |
+  |
+  .alt-menu__content
+    |
+    |
+    .alt-menu__ava 
+      .wrap-ava 
+        img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+      .title Kevin Systrom
+    |
+    |
+    .alt-menu__wallet 
+      +wallet-info({amount: 352})
+    |
+    |
+    .alt-menu__ancor
+      a(href="./instruction.html")
+        <svg width="24" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#attention-icon'></use> 
+        </svg> 
+        span Инструкция
+    |
+    |
+    .alt-menu__ancor
+      a(href="./")
+        <svg width="26" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#quest-icon'></use> 
+        </svg> 
+        span Поддержка
+    |
+    |
+    .alt-menu__exit 
+      a(href="./")
+        <svg width="21" height="26">
+          <use xlink:href='./assets/svg/svg_sprite.svg#icon-exit'></use> 
+        </svg> 
+        span Выход
+    |
+    |
+  |
+  |
+|
+|
+.popup.popup-quality 
+  |
+  |
+  .h4 Чтобы закрыть вопрос оцените качество помощи специалиста
+  |
+  |
+  form(action="#").form-quality
+    |
+    |
+    .rating
+      input(type="radio", name="quality", value="5", id="star5")
+      label(for="star5")
+        img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+        img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+      input(type="radio", name="quality", value="4", id="star4")
+      label(for="star4")
+        img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+        img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+      input(type="radio", name="quality", value="3", id="star3")
+      label(for="star3")
+        img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+        img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+      input(type="radio", name="quality", value="2", id="star2")
+      label(for="star2")
+        img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+        img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+      input(type="radio", name="quality", value="1", id="star1")  
+      label(for="star1")
+        img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+        img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+    |
+    |
+    +btn({
+      type: 'submit',
+      class: 'btn width-154px close-popup',
+      text: 'Отправить'
+    })
+  |
+  |
+|
+|
+.popup.popup-thank-for-rate
+  |
+  |
+  .h3.popup__title Спасибо за оценку!)
+  |
+  |
+  .h5 Вопрос закрыт
+  |
+  |
+  +btn({
+    type: 'button',
+    class: 'btn close-popup',
+    text: 'Всегда пожалуйста'
+  })
+  |
+  |
+|
+|
+.popup.popup-what-happen
+  |
+  |
+  .h3.popup__title Что пошло не так?
+  |
+  |
+  form(action="#").form-what-happen
+    | 
+    |
+    label.checkable
+      input(type="checkbox", name="checkable1")
+      .bg
+      .checkable__text Специалист не до конца раскрыл вопрос
+      .checkable__icon 
+        <svg width="24" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+        </svg>
+    | 
+    |
+    label.checkable
+      input(type="checkbox", name="checkable1")
+      .bg
+      .checkable__text Не получен внятный ответ
+      .checkable__icon 
+        <svg width="24" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+        </svg>
+    | 
+    |
+    label.checkable
+      input(type="checkbox", name="checkable1")
+      .bg
+      .checkable__text Совет не помог
+      .checkable__icon 
+        <svg width="24" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+        </svg>
+    | 
+    |
+    label.checkable
+      input(type="checkbox", name="checkable1")
+      .bg
+      .checkable__text Специалист нагрубил
+      .checkable__icon 
+        <svg width="24" height="24">
+          <use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+        </svg>
+    | 
+    |
+    +btn({
+      type: 'submit',
+      class: 'btn close-popup',
+      text: 'Отправить'
+    })
+  |
+  |
+|
+|
 // popup template
 .popup
   |
   |
-  button.popup__btn-close
-
+  button.popup__btn-close 
   |
   |
 |
 |
 //-data-popup=".popup_target")
 //-.close-popup
+ 

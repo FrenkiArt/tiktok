@@ -253,7 +253,7 @@
        <path d="M11 12C11 10.8954 11.8954 10 13 10H18V14H13C11.8954 14 11 13.1046 11 12V12Z" stroke="#5BCAD2"
          stroke-width="2" />
      </g>
-   </symbol> 
+   </symbol>
 
    <symbol id="attention-icon" viewBox="0 0 24 24">
      <g>
@@ -310,6 +310,29 @@
    <symbol id="icon-ok" viewBox="0 0 18 13">
      <g>
        <path d="M17 1L6 12L1 7" fill="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+     </g>
+   </symbol>
+
+   <symbol id="icon-close" viewBox="0 0 18 18">
+     <g>
+       <path d="M17 1L1 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+       <path d="M1 1L17 17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+     </g>
+   </symbol>
+
+   <symbol id="galka" viewBox="0 0 24 24">
+     <g>
+       <circle cx="12" cy="12" r="11.5" />
+       <path d="M16 9L10.5 15L8 12.2727" stroke-linecap="round" stroke-linejoin="round" />
+     </g>
+   </symbol>
+
+   <symbol id="template" width="0" height="0" viewbox="0 0 0 0">
+     <g>
+       <path
+         d="M 23 12.3 C 23 6.1 18.1 1 12 1 C 5.9 1 1 6.1 1 12.3 V 27.7 C 1 33.9 5.9 39 12 39 C 18.1 39 23 33.9 23 27.7 V 12.3 Z"
+         stroke="white" stroke-width="2" />
+       <path d="M 11 10 H 13 V 18 H 11 V 10 Z" />
      </g>
    </symbol>
 

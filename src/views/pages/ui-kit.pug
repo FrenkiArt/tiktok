@@ -704,6 +704,45 @@ block content
         |
         button(
           type="button"
+          class="btn-red" 
+          data-popup=".popup-quality"
+        ) 
+          span Попап оценки качества работ
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        button(
+          type="button"
+          class="btn-red" 
+          data-popup=".popup-thank-for-rate"
+        ) 
+          span Попап Спасибо за оценку!)
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        button(
+          type="button"
+          class="btn-red" 
+          data-popup=".popup-what-happen"
+        ) 
+          span Что пошло не так?
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        button(
+          type="button"
           class="btn-form"   
         ) 
           span Изменить
@@ -720,45 +759,7 @@ block content
         ) 
           span Отмена
         |
-        |
-      |
-      |
-      li
-        |
-        |
-        ul.list-ok 
-          |
-          |
-          li 
-            .h5 Соединение
-            <svg width="18" height="13">
-              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
-            </svg>
-          |
-          |
-          li 
-            .h5 Профиль
-            <svg width="18" height="13">
-              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
-            </svg>
-          |
-          |
-          li 
-            .h5 Верификация
-            <svg width="18" height="13">
-              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
-            </svg>
-          |
-          |
-          li 
-            .h5 Зашифрованные данные
-            <svg width="18" height="13">
-              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
-            </svg>
-          |
-          |
-        |
-        |
+        | 
       |
       |
       li
@@ -826,6 +827,9 @@ block content
       li
         |
         |
+        .h3.color-white Блок с платежом
+        |
+        |
         .payment-block 
           |
           |
@@ -834,7 +838,7 @@ block content
             |
             .my-select--dark
               +select({
-                title: 'Список белый'
+                title: 'Список тёмный'
               })
             |
             |
@@ -876,6 +880,44 @@ block content
         |
       |
       |
+      li 
+        |
+        |
+        ul.list-ok 
+          |
+          |
+          li 
+            .h5 Соединение
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Профиль
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Верификация
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Зашифрованные данные
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+        |
+        |
+      |
+      |
       li
         |
         |
@@ -883,6 +925,44 @@ block content
           +select({
             title: 'Список белый'
           })
+        |
+        |
+      |
+      |
+      li 
+        |
+        |
+        ul.list-ok 
+          |
+          |
+          li 
+            .h5 Соединение
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Профиль
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Верификация
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
+          li 
+            .h5 Зашифрованные данные
+            <svg width="18" height="13">
+              <use xlink:href='./assets/svg/svg_sprite.svg#icon-ok'></use> 
+            </svg>
+          |
+          |
         |
         |
       |
@@ -993,6 +1073,57 @@ block content
             | 
           |
           |
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        .rating
+          input(type="radio", name="quality", value="5", id="star5")
+          label(for="star5")
+            img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+            img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+          input(type="radio", name="quality", value="4", id="star4")
+          label(for="star4")
+            img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+            img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+          input(type="radio", name="quality", value="3", id="star3")
+          label(for="star3")
+            img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+            img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+          input(type="radio", name="quality", value="2", id="star2")
+          label(for="star2")
+            img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+            img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+          input(type="radio", name="quality", value="1", id="star1")  
+          label(for="star1")
+            img(src="assets/svg/star-empty.svg", alt="", loading="lazy").empty
+            img(src="assets/svg/star-full.svg", alt="", loading="lazy").full
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+        label.checkable
+          input(type="checkbox", name="checkable1")
+          .bg
+          .checkable__text Какой-то текст
+          .checkable__icon 
+            <svg width="24" height="24">
+              <use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+            </svg>
+        |
+        |
+      |
+      |
+      li
+        |
+        |
+         
         |
         |
       |
