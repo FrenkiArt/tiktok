@@ -49,12 +49,17 @@ header#header.header.header-index
       |   
     |
     |
-    button(
+    //button(
       type="button"
       class="btn-red" 
       data-popup=".popup-login"
-    ) 
-      span Личный кабинет 
+      ) 
+        span Личный кабинет 
+    button(type="button", data-popup=".popup-login").btn-red
+      span Личный кабинет
+      <svg width="14" height="18" class="icon">
+        <use xlink:href='./assets/svg/svg_sprite.svg#icon-human'></use> 
+      </svg>
     |
     |
   |

@@ -52,6 +52,11 @@ window.onresize = () => {
   }, 1);
 };
 
+if (window.matchMedia('(max-width: 640px)').matches) {
+  // do functionality on screens smaller than 640px
+} else {
+}
+
 // eslint-disable-next-line new-cap
 const fullPageInstance = new fullpage('#fullpage', {
   licenseKey: null,
@@ -60,11 +65,16 @@ const fullPageInstance = new fullpage('#fullpage', {
   navigationPosition: 'right',
   controlArrows: true,
   autoScrolling: true,
+  scrollBar: true,
   menu: '#myMenu',
-  paddingTop: '72px',
+  scrollOverflowReset: true,
+  // dragAndMove: true,
+  // paddingTop: '72px',
   // fixedElements: '#header, #footer',
   // sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', 'grey'],
 });
+
+console.log(fullPageInstance);
 
 /* Про Попапы */
 if (document.querySelector('[data-popup]')) {
@@ -203,4 +213,29 @@ if (document.querySelector('.btn-menu')) {
   });
 }
 
-console.log(fullPageInstance);
+/* Работа с чатом */
+/* Работа с левой частью где список чатов сокращённо */
+if (document.querySelector('.chats-list')) {
+  document.querySelector('.chats-list').addEventListener('click', function (e) {
+    if (e.target.closest('.delete')) {
+      e.target.closest('.chats-list__item').remove();
+    } else if (e.target.closest('.chats-list__item')) {
+      document.querySelectorAll('.chats-list__item').forEach((item) => {
+        item.classList.remove('open');
+      });
+      e.target.closest('.chats-list__item').classList.add('open');
+
+      document.querySelector('.chat__aside').classList.add('mob-hide');
+    }
+  });
+
+  document
+    .querySelector('.chat__main .arr-back')
+    .addEventListener('click', function () {
+      document.querySelector('.chat__aside').classList.remove('mob-hide');
+
+      document.querySelectorAll('.chats-list__item').forEach((item) => {
+        item.classList.remove('open');
+      });
+    });
+}

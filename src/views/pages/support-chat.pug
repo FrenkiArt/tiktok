@@ -1,0 +1,224 @@
+extends ../templates/_inner-support-template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  | 
+  | 
+  .page-support
+    |
+    |
+    .page-support__chat
+      |
+      |
+      .chat
+        |
+        |
+        .chat__aside 
+          |
+          |
+          .chat__aside-header
+            .h3 Поддержка
+          |
+          |
+          ul.chats-list 
+            |
+            |
+            li.chats-list__item 
+              button.delete(title="Удалить диалог") 
+                <svg width="18" height="18" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                </svg>
+              .time 12:30
+              .counter
+              .h6.theme Тема: Помощь
+              .small-text.status.closed Вопрос закрыт
+              .text Привет, у тебя были какие-то вопросы по 3-му Привет, у тебя были какие-то вопросы по 3-му…
+            |
+            |
+            li.chats-list__item
+              button.delete(title="Удалить диалог") 
+                <svg width="18" height="18" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                </svg>
+              .time 12:30
+              .counter
+              .h6.theme Тема: Помощь
+              .status.opened Вопрос закрыт
+              .text 
+                strong Вы: 
+                span Спасибо, что уточнили.
+              .unread-symbol
+            |
+            |
+            li.chats-list__item 
+              button.delete(title="Удалить диалог")  
+                <svg width="18" height="18" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                </svg>
+              .time 12:30
+              .counter 3
+              .h6.theme Тема: Помощь
+              .status.closed Вопрос закрыт
+              .text Да! Я тоже так думаю
+            |
+            |
+            li.chats-list__item 
+              button.delete(title="Удалить диалог")  
+                <svg width="18" height="18" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                </svg>
+              .time 12:30
+              .counter
+              .h6.theme Тема: Помощь
+              .status.opened Вопрос открыт
+              .text Как мне кажется, каждый может также. Но...
+            |
+            |
+            li.chats-list__item 
+              button.delete(title="Удалить диалог")  
+                <svg width="18" height="18" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                </svg>
+              .time 12:30
+              .counter
+              .h6.theme Тема: Помощь
+              .status.opened Вопрос открыт
+              .text Как мне кажется, каждый может также. Но...
+            |
+            |
+          |
+          |
+          .chat__aside-footer
+            +btn-plus({
+              type: 'button',
+              class: 'btn--white btn--plus max-h-40',
+              text: 'Создать запрос',
+              disabled: null
+            })
+          |
+          |
+        |
+        |
+        .chat__main 
+          |
+          |
+          .chat__main-header 
+            |
+            |
+            .line-1
+              button.arr-back
+                <svg width="17" height="8" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#arr-back'></use> 
+                </svg>
+                span Назад
+              |
+              |
+              a(href="#").link.close-quest Закрыть вопрос
+            |
+            |
+            .line-2
+              |
+              |
+              .theme 
+                .theme__title Тема
+                .theme__text Помощь
+              |
+              |
+            |
+            |
+          |
+          |
+          .chat__main-messages
+            |
+            |
+            ul.list-messages   
+              |
+              |
+              li.list-messages__item
+                .chat__date ВЧЕРА
+              |
+              |
+              li.list-messages__item
+                .message.message-server
+                  .message__text Чем могу помочь?
+                  .message__time 12:30
+              |
+              |
+              li.list-messages__item
+                .message.message-client
+                  .message__text Не получается получить доступ к аккаунту. На балансе достаточно средств, но выдает ошибку. Что-то идет не так. Я не вижу смысла продолжать это. Помогите мне. Что делать? Как быть?
+                  .message__time 12:30
+                  .message__attention.time 
+                    <svg width="20" height="20"  >
+                      <use xlink:href='./assets/svg/svg_sprite.svg#chat-time'></use> 
+                    </svg>
+              |
+              |
+              li.list-messages__item
+                .chat__date СЕГОДНЯ
+              |
+              |
+              li.list-messages__item
+                .message.message-server
+                  .message__text Привет! Не забудь про то, что урок пернесен на 15 ноября в 19:00
+                  .message__time 12:30
+              |
+              |
+              li.list-messages__item
+                .message.message-client
+                  .message__text Спасибо большое!)
+                  .message__time 12:30
+                  .message__attention.attention 
+                    <svg width="20" height="20"  >
+                      <use xlink:href='./assets/svg/svg_sprite.svg#chat-attention'></use> 
+                    </svg>
+              |
+              |
+              li.list-messages__item
+                .message.message-server
+                  .message__text Я лучший
+                  .message__time 12:30
+              |
+              |
+              li.list-messages__item
+                .message.message-client
+                  .message__text Без базара
+                  .message__time 12:30
+              |
+              |
+              li.list-messages__item
+                .message.message-server
+                  .message__text Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текстДлинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текстДлинный текст
+                  .message__time 12:30
+              |
+              |
+              li.list-messages__item
+                .message.message-client
+                  .message__text Круть
+                  .message__time 12:30
+                  .message__attention.unread
+              |
+              |
+            |
+            |
+          |
+          |
+          .chat__main-footer
+            | А здесь будет всякая отправлялка текста
+          | 
+          |
+        |
+        | 
+      |
+      |
+    |
+    |
+  |
+  |

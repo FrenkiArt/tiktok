@@ -9,20 +9,6 @@
   @media screen and(max-width: 640px) {
   }
 
-  .container {
-    max-width: 1360px;
-    padding: 0 48px;
-
-    @media screen and(max-width: 1600px) {
-      max-width: calc(100% - 60px);
-      padding: 0;
-    }
-
-    @media screen and(max-width: 800px) {
-      max-width: calc(100% - 32px);
-    }
-  }
-
   // .page-support__main
   &__main {
     text-align: center;
@@ -91,6 +77,437 @@
           display: none;
         }
       }
+    }
+  }
+
+  // .page-support__chat
+  &__chat {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.chat {
+  max-height: calc(100vh - 72px);
+  display: flex;
+  width: 100%;
+
+  @media screen and(max-width: 640px) {
+    max-height: calc(100vh - 48px);
+  }
+  // .chat__aside
+  &__aside {
+    width: 562px;
+    height: 100%;
+    background-color: #1a2442;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    @media screen and(max-width: 1200px) {
+      width: 320px;
+    }
+
+    @media screen and(max-width: 800px) {
+      width: 280px;
+    }
+
+    @media screen and(max-width: 640px) {
+      width: 100%;
+
+      &.mob-hide {
+        display: none;
+      }
+    }
+  }
+
+  // .chat__aside-header
+  &__aside-header {
+    padding: 24px 48px 30px;
+    flex-shrink: 0;
+
+    @media screen and(max-width: 1200px) {
+      padding: 24px 16px 24px;
+    }
+
+    @media screen and(max-width: 640px) {
+      padding: 16px 16px 24px;
+    }
+  }
+
+  // .chat__aside-footer
+  &__aside-footer {
+    padding: 24px 48px 40px;
+    flex-shrink: 0;
+
+    @media screen and(max-width: 1200px) {
+      padding: 24px 16px 24px;
+    }
+  }
+
+  // .chat__main
+  &__main {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .chat__main-header
+  &__main-header {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    padding-right: 20px;
+
+    @media screen and(max-width: 640px) {
+      padding-right: 0;
+    }
+
+    .line-1 {
+      height: 56px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @media screen and(max-width: 640px) {
+        background-color: #1a2442;
+      }
+    }
+
+    .line-2 {
+      min-height: 56px;
+      display: none;
+      padding: 10px 16px;
+      border-bottom: 1px solid #323a52;
+      align-items: center;
+      width: 100%;
+
+      @media screen and(max-width: 640px) {
+        display: flex;
+        background-color: #060f23;
+      }
+    }
+
+    .theme {
+      // theme__title
+      &__title {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 16px;
+        color: #828282;
+      }
+
+      // theme__text
+      &__text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  // .chat__main-messages
+  &__main-messages {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  // .chat__main-footer
+  &__main-footer {
+    background-color: purple;
+    flex-shrink: 0;
+    padding: 28px 48px;
+
+    @media screen and(max-width: 1200px) {
+      padding: 16px 16px;
+    }
+  }
+
+  // .chat__date
+  &__date {
+    text-transform: uppercase;
+    padding: 4px 24px;
+    font-size: 13px;
+    background: #121b35;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 32px;
+    margin: 32px auto 8px;
+    color: #bdbdbd;
+    display: inline-flex;
+
+    @media screen and(max-width: 800px) {
+      font-size: 10px;
+      line-height: 16px;
+      padding: 4px 16px;
+    }
+  }
+
+  .chats-list {
+    height: 100%;
+    padding: 0 48px;
+
+    @media screen and(max-width: 1200px) {
+      padding: 0 16px;
+    }
+  }
+
+  .arr-back {
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    display: none;
+    color: #ffffff;
+    transition: all 0.3s;
+
+    @media screen and(max-width: 640px) {
+      display: inline-flex;
+    }
+
+    svg {
+      fill: #ffffff;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: rgba(91, 202, 210, 1);
+
+      svg {
+        fill: rgba(91, 202, 210, 1);
+      }
+    }
+  }
+
+  .close-quest {
+    position: relative;
+    margin-left: auto;
+  }
+
+  .list-messages {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    padding: 0 48px;
+
+    @media screen and(max-width: 1200px) {
+      padding: 0 16px;
+    }
+
+    // .list-messages__item
+    &__item {
+      display: flex;
+    }
+  }
+
+  .message {
+    min-height: 56px;
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+    padding: 14px 24px;
+    margin-bottom: 8px;
+    max-width: 75%;
+    position: relative;
+
+    @media screen and(max-width: 800px) {
+      min-height: 40px;
+      padding: 9px 16px;
+    }
+
+    // .message__text
+    &__text {
+      position: relative;
+    }
+
+    // .message__time
+    &__time {
+      color: #bdbdbd;
+      font-size: 13px;
+      right: 0;
+      bottom: -8px;
+      line-height: 16px;
+      padding: 4px 8px;
+      background: #060f23;
+      position: absolute;
+
+      @media screen and(max-width: 800px) {
+        font-size: 10px;
+        line-height: 16px;
+        padding: 2px 6px;
+      }
+    }
+
+    &.message-server {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin-right: auto;
+    }
+
+    &.message-client {
+      margin-left: auto;
+    }
+
+    .message__attention {
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      border-radius: 100%;
+      transform: translate(0, -50%);
+    }
+
+    .unread {
+      width: 8px;
+      height: 8px;
+      background-color: #e93745;
+    }
+  }
+}
+
+.chats-list {
+  overflow: auto;
+
+  // .chats-list__item
+  &__item {
+    padding: $offset22px 40px $offset22px 0;
+    border-bottom: 1px solid #323a52;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+
+    @media screen and(max-width: 640px) {
+      padding: 16px 40px 16px 0;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid #323a52;
+    }
+
+    &:hover {
+      .time {
+        display: none;
+      }
+
+      .delete {
+        display: block;
+      }
+    }
+
+    &.open {
+      &::before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 48px + 48px);
+        height: calc(100% + 2px);
+        left: -48px;
+        top: -1px;
+        background-color: #000000;
+        z-index: -1;
+
+        @media screen and(max-width: 1200px) {
+          width: calc(100% + 16px + 16px);
+          left: -16px;
+        }
+      }
+    }
+  }
+
+  .delete {
+    position: absolute;
+    top: $offset22px;
+    right: 0;
+    padding: 4px;
+    display: none;
+
+    @media screen and(max-width: 640px) {
+      top: 12px;
+    }
+
+    svg {
+      stroke: #828282;
+    }
+  }
+
+  .time {
+    position: absolute;
+    top: $offset22px;
+    right: 0;
+
+    @media screen and(max-width: 640px) {
+      top: 16px;
+      font-size: 10px;
+    }
+  }
+
+  .counter {
+    border-radius: 24px;
+    padding: 0 5px;
+    position: absolute;
+    bottom: $offset22px;
+    right: 0;
+    color: #060f23;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    min-width: 24px;
+    background-color: #ffffff;
+
+    @media screen and(max-width: 640px) {
+      bottom: 16px;
+      font-size: 10px;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .theme {
+    font-weight: 500;
+  }
+
+  .status {
+    transform: translate(0, -6px);
+
+    &.closed {
+      opacity: 0.5;
+    }
+
+    &.opened {
+      color: #5bcad2;
+    }
+  }
+
+  .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+  }
+
+  .unread-symbol {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    position: absolute;
+    right: 6px;
+    bottom: $offset22px;
+
+    @media screen and(max-width: 640px) {
+      bottom: 16px;
     }
   }
 }
