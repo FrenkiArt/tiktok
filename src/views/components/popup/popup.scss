@@ -10,7 +10,7 @@
   padding: 32px 40px 48px;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
-  transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
   visibility: hidden;
   width: 100%;
   z-index: 20;

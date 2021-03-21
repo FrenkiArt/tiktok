@@ -15,7 +15,9 @@ function tabClickHandler(e) {
   if (e.target.classList.contains('active')) {
     // nothing
   } else {
-    parent.querySelector('.active').classList.remove('active');
+    if (parent.querySelector('.active')) {
+      parent.querySelector('.active').classList.remove('active');
+    }
     e.target.classList.add('active');
   }
 

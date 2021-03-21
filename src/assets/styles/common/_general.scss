@@ -260,7 +260,8 @@ svg {
     position: absolute;
     right: 50%;
     top: 50%;
-    transform: translate(10%, -38%);
+    // transform: translate(10%, -36%);
+    transform: translate(10%, -30%);
     pointer-events: none;
 
     @media screen and(max-width: 1000px) {

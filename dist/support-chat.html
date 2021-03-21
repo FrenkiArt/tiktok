@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="">
+    <meta name="author" content=""><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <title>Заголовок</title>
+    <style>
+      body {
+      }
+      .popup {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+    </style>
+  <link href="assets/styles/main.css" rel="stylesheet"></head>
+  
+  <body class="bg-060F23">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Header-->
+    
+    
+    <header class="header header-inner" id="header">
+      
+      
+      <div class="container">
+        
+        
+        <div class="wrap-logo"><a class="logo" href="./" title="Главная"><img class="logo__img" src="assets/svg/header-logo-star.svg" alt="" loading="lazy">
+            <div class="logo__text">Tit-tok vzlom</div></a></div>
+        
+        <ul class="menu-list">
+          
+          
+          <li class="menu-list__item">
+            
+            <a class="menu-list__link" href="./hack.html"><span>Взломать </span><span class="mobile-hide">аккаунт</span></a>
+            
+          </li>
+          
+          <li class="menu-list__item">
+            
+            <a class="menu-list__link" href="./available.html"> <span>Доступные </span><span class="mobile-hide">аккаунты</span></a>
+            
+          </li>
+            
+        </ul>
+        
+        <div class="profile-short">
+           
+          
+          <div class="line-attention">
+             
+            <a href="#">
+               <svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#attention-icon'></use> 
+</svg> </a>
+            <a class="active" href="#"><svg width="26" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#quest-icon'></use> 
+</svg> </a>
+            
+          </div>
+          <a class="wallet-info" href="#"> 
+                <div class="wallet-info__amount">352</div>
+                <div class="wallet-info__symbol">₽</div>
+                <div class="wallet-info__icon">
+                   <svg width="17" height="16" class="icon-1">
+<use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon'></use> 
+</svg>
+<svg width="17" height="16" class="icon-2">
+<use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon-2'></use> 
+</svg>
+                </div></a>
+          <a class="short-avatar" href="./profile.html"> 
+            <div class="wrap-img"> <img src="assets/images/short-ava.jpg" alt="" loading="lazy"></div></a>
+          
+              <button class="btn-menu"><span> </span><span> </span><span> </span></button>
+          
+        </div>
+        
+      </div>
+      
+      <div class="load-line"> </div>
+      
+    </header>
+    
+    <!-- Header/-->
+     
+    <div class="wrap-inner">
+       
+       
+      <div class="page-support">
+        
+        
+        <div class="page-support__chat">
+          
+          
+          <div class="chat">
+            
+            
+            <div class="chat__aside">
+               
+              
+              <div class="chat__aside-header">
+                <div class="h3">Поддержка</div>
+              </div>
+              
+              <ul class="chats-list">
+                 
+                
+                <li class="chats-list__item"> 
+                  <button class="delete" title="Удалить диалог">
+                     <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+                  </button>
+                  <div class="time">12:30</div>
+                  <div class="counter"></div>
+                  <div class="h6 theme">Тема: Помощь</div>
+                  <div class="small-text status closed">Вопрос закрыт</div>
+                  <div class="text">Привет, у тебя были какие-то вопросы по 3-му Привет, у тебя были какие-то вопросы по 3-му…</div>
+                </li>
+                
+                <li class="chats-list__item">
+                  <button class="delete" title="Удалить диалог">
+                     <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+                  </button>
+                  <div class="time">12:30</div>
+                  <div class="counter"></div>
+                  <div class="h6 theme">Тема: Помощь</div>
+                  <div class="status opened">Вопрос закрыт</div>
+                  <div class="text"> <strong>Вы: </strong><span>Спасибо, что уточнили.</span></div>
+                  <div class="unread-symbol"></div>
+                </li>
+                
+                <li class="chats-list__item"> 
+                  <button class="delete" title="Удалить диалог">
+                     <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+                  </button>
+                  <div class="time">12:30</div>
+                  <div class="counter">3</div>
+                  <div class="h6 theme">Тема: Помощь</div>
+                  <div class="status closed">Вопрос закрыт</div>
+                  <div class="text">Да! Я тоже так думаю</div>
+                </li>
+                
+                <li class="chats-list__item"> 
+                  <button class="delete" title="Удалить диалог">
+                     <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+                  </button>
+                  <div class="time">12:30</div>
+                  <div class="counter"></div>
+                  <div class="h6 theme">Тема: Помощь</div>
+                  <div class="status opened">Вопрос открыт</div>
+                  <div class="text">Как мне кажется, каждый может также. Но...</div>
+                </li>
+                
+                <li class="chats-list__item"> 
+                  <button class="delete" title="Удалить диалог">
+                     <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+                  </button>
+                  <div class="time">12:30</div>
+                  <div class="counter"></div>
+                  <div class="h6 theme">Тема: Помощь</div>
+                  <div class="status opened">Вопрос открыт</div>
+                  <div class="text">Как мне кажется, каждый может также. Но...</div>
+                </li>
+                
+              </ul>
+              
+              <div class="chat__aside-footer">
+                    <button class="btn--white btn--plus max-h-40" type="button">
+                      <div class="bg"></div><svg width="14" height="14">
+<use xlink:href="./assets/svg/svg_sprite.svg#icon-plus"></use>
+</svg><span>Создать запрос</span>
+                    </button>
+              </div>
+              
+            </div>
+            
+            <div class="chat__main">
+               
+              
+              <div class="chat__main-header">
+                 
+                
+                <div class="line-1">
+                  <button class="arr-back"><svg width="17" height="8" >
+<use xlink:href='./assets/svg/svg_sprite.svg#arr-back'></use> 
+</svg><span>Назад</span>
+                  </button>
+                  <a class="link close-quest" href="#">Закрыть вопрос</a>
+                </div>
+                
+                <div class="line-2">
+                  
+                  
+                  <div class="theme"> 
+                    <div class="theme__title">Тема</div>
+                    <div class="theme__text">Помощь</div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+              <div class="chat__main-messages">
+                
+                
+                <ul class="list-messages">
+                    
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-client">
+                      <div class="message__text">Пример с картинками</div>
+                      <div class="message__time">12:30 </div>
+                      <div class="message__imgs"><a class="wrap-img" href="assets/images/programming1.png" download> <img src="assets/images/programming1.png" alt="" loading="lazy"></a><a class="wrap-img" href="assets/images/short-ava.jpg" download> <img src="assets/images/short-ava.jpg" alt="" loading="lazy"></a><a class="wrap-img" href="assets/images/user-pic-1.jpg" download> <img src="assets/images/user-pic-1.jpg" alt="" loading="lazy"></a><a class="wrap-img" href="assets/images/random-logo.jpg" download> <img src="assets/images/random-logo.jpg" alt="" loading="lazy"></a></div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="chat__date">ВЧЕРА</div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-server">
+                      <div class="message__text">Чем могу помочь?</div>
+                      <div class="message__time">12:30</div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-client">
+                      <div class="message__text">Не получается получить доступ к аккаунту. На балансе достаточно средств, но выдает ошибку. Что-то идет не так. Я не вижу смысла продолжать это. Помогите мне. Что делать? Как быть?</div>
+                      <div class="message__time">12:30</div>
+                      <div class="message__attention time">
+                         <svg width="20" height="20"  >
+<use xlink:href='./assets/svg/svg_sprite.svg#chat-time'></use> 
+</svg>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="chat__date">СЕГОДНЯ</div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-server">
+                      <div class="message__text">Привет! Не забудь про то, что урок пернесен на 15 ноября в 19:00</div>
+                      <div class="message__time">12:30</div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-client">
+                      <div class="message__text">Спасибо большое!)</div>
+                      <div class="message__time">12:30</div>
+                      <div class="message__attention attention">
+                         <svg width="20" height="20"  >
+<use xlink:href='./assets/svg/svg_sprite.svg#chat-attention'></use> 
+</svg>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-server">
+                      <div class="message__text">Я лучший</div>
+                      <div class="message__time">12:30</div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-client">
+                      <div class="message__text">Без базара</div>
+                      <div class="message__time">12:30</div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-server">
+                      <div class="message__text">Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текстДлинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст Длинный текстДлинный текст</div>
+                      <div class="message__time">12:30</div>
+                    </div>
+                  </li>
+                  
+                  <li class="list-messages__item">
+                    <div class="message message-client">
+                      <div class="message__text">Круть</div>
+                      <div class="message__time">12:30</div>
+                      <div class="message__attention unread"> </div>
+                    </div>
+                  </li>
+                  
+                </ul>
+                
+              </div>
+              
+              <div class="chat__main-footer">
+                
+                
+                <div class="chat__wrap-input">
+                   
+                  
+                  <textarea class="textarea" placeholder="Сообщение..." row="1"> </textarea>
+                  
+                  <label class="btn-load-file" title="Добавить файл">
+                    <input type="file" multiple name="" accept="image/*"><svg width="10" height="10" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-plus'></use> 
+</svg>
+                  </label>
+                  
+                  <button class="btn-circle btn-submit"> 
+                    <div class="bg"></div><svg width="16" height="12">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-arrow'></use> 
+</svg>
+                  </button>
+                  
+                </div>
+                
+                <!--.chat__wrap-attach-imgs 
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/programming1.png", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/random-logo.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/programming1.png", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/random-logo.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/programming1.png", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |
+                .wrap-img 
+                  img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                  button.delete-this-img
+                    <svg width="10" height="10">
+                      <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                    </svg>
+                |
+                |    
+                -->
+                
+              </div> 
+              
+            </div>
+             
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    
+    <div class="overlay"></div>
+    
+    <div class="popup popup-login">
+       
+      
+          <div class="tabs skin-red">
+            
+            
+            <button class="tabs__item active" data-toggle=".form-login">Вход</button>
+            <button class="tabs__item" data-toggle=".form-registration">Регистрация</button>
+             
+          </div>
+      
+      <form class="form form-login" action="#" data-tabelement>
+        
+        
+        <div class="form__row">
+          
+          
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="email" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">E-mail </div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+               
+            </div>
+            
+          </div>
+           
+        </div>
+        
+        <div class="form__row">
+          
+          
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="password" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">Пароль </div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+              
+              <button class="icon-hide-pass"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+</svg>
+              </button>
+              
+              <button class="icon-show-pass dn"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+</svg> 
+              </button>
+              
+            </div>
+            
+          </div>
+           
+        </div>
+        
+        <div class="form__row last">
+          
+          
+              <button class="btn width-122px" type="submit">
+                <div class="bg"></div><span>Вход</span>
+              </button>
+          <a class="link--red" href="#" id="open-popup-forgot-password">Забыли пароль?</a>
+          
+        </div>
+        
+      </form>
+      
+      <form class="form form-registration dn" action="#" data-tabelement>
+        
+        
+        <div class="form__row">
+          
+          
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="text" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">Никнейм</div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+               
+            </div>
+             
+          </div>
+          
+        </div>
+        
+        <div class="form__row">
+          
+           
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="email" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">E-mail </div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+               
+            </div>
+            
+          </div>
+           
+        </div>
+        
+        <div class="form__row">
+          
+          
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="password" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">Пароль </div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+              
+              <button class="icon-hide-pass"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-hide-pass--white'></use> 
+</svg>
+              </button>
+              
+              <button class="icon-show-pass dn"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-show-pass--white'></use> 
+</svg> 
+              </button>
+              
+            </div>
+            
+          </div>
+           
+        </div>
+        
+        <div class="form__row last">
+          
+          
+              <button class="btn width-100" type="submit">
+                <div class="bg"></div><span>Зарегистрироваться</span>
+              </button>
+           
+        </div>
+        
+      </form>
+       
+    </div>
+    
+    <div class="popup popup-forget-password">
+      
+      
+      <div class="h3 popup__title">Забыли пароль?</div>
+      
+      <form class="form form-forget-password" action="#">
+        
+        
+        <div class="form__row">
+          
+           
+          <div class="uni-input uni-input--white">
+            
+            
+            <input class="uni-input__input" type="email" name="" placeholder=" ">
+            
+            <div class="uni-input__placeholder">E-mail </div>
+            
+            <div class="uni-input__wrap-icons">
+                
+              
+              <button class="icon-clear"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-clear--white'></use> 
+</svg> 
+              </button>
+              
+              <button class="icon-wrong"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-wrong--white'></use> 
+</svg>
+              </button>
+               
+            </div>
+            
+          </div>
+           
+        </div>
+        
+        <div class="form__row last">
+          
+          
+              <button class="btn" type="submit">
+                <div class="bg"></div><span>Восстановить</span>
+              </button>
+          <a class="link--red" href="#" id="open-popup-login">Войти?</a>
+          
+        </div>
+        
+      </form>
+      
+    </div>
+    
+    <div class="popup popup-sent-password">
+      
+      
+      <div class="h3 popup__title">На вашу почту отправлен новый пароль</div>
+      
+      <div class="popup__text">Используйте его для входа</div>
+      
+          <button class="btn width-154px close-popup" type="button">
+            <div class="bg"></div><span>Супер!</span>
+          </button>
+      
+    </div>
+    
+    <div class="alt-menu">
+      
+      
+      <button class="alt-menu__close">
+         <svg width="18" height="18" >
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+</svg>
+      </button>
+      
+      <div class="alt-menu__content">
+        
+        
+        <div class="alt-menu__ava"> 
+          <div class="wrap-ava"> <img src="assets/images/short-ava.jpg" alt="" loading="lazy"></div>
+          <div class="title">Kevin Systrom</div>
+        </div>
+        
+        <div class="alt-menu__wallet"> <a class="wallet-info" href="#"> 
+                <div class="wallet-info__amount">352</div>
+                <div class="wallet-info__symbol">₽</div>
+                <div class="wallet-info__icon">
+                   <svg width="17" height="16" class="icon-1">
+<use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon'></use> 
+</svg>
+<svg width="17" height="16" class="icon-2">
+<use xlink:href='./assets/svg/svg_sprite.svg#wallet-icon-2'></use> 
+</svg>
+                </div></a>
+        </div>
+        
+        <div class="alt-menu__ancor"><a href="./instruction.html"><svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#attention-icon'></use> 
+</svg> <span>Инструкция</span></a></div>
+        
+        <div class="alt-menu__ancor"><a href="./"><svg width="26" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#quest-icon'></use> 
+</svg> <span>Поддержка</span></a></div>
+        
+        <div class="alt-menu__exit"> <a href="./"><svg width="21" height="26">
+<use xlink:href='./assets/svg/svg_sprite.svg#icon-exit'></use> 
+</svg> <span>Выход</span></a></div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="popup popup-quality">
+       
+      
+      <div class="h4">Чтобы закрыть вопрос оцените качество помощи специалиста</div>
+      
+      <form class="form-quality" action="#">
+        
+        
+        <div class="rating">
+          <input type="radio" name="quality" value="5" id="star5">
+          <label for="star5"><img class="empty" src="assets/svg/star-empty.svg" alt="" loading="lazy"><img class="full" src="assets/svg/star-full.svg" alt="" loading="lazy"></label>
+          <input type="radio" name="quality" value="4" id="star4">
+          <label for="star4"><img class="empty" src="assets/svg/star-empty.svg" alt="" loading="lazy"><img class="full" src="assets/svg/star-full.svg" alt="" loading="lazy"></label>
+          <input type="radio" name="quality" value="3" id="star3">
+          <label for="star3"><img class="empty" src="assets/svg/star-empty.svg" alt="" loading="lazy"><img class="full" src="assets/svg/star-full.svg" alt="" loading="lazy"></label>
+          <input type="radio" name="quality" value="2" id="star2">
+          <label for="star2"><img class="empty" src="assets/svg/star-empty.svg" alt="" loading="lazy"><img class="full" src="assets/svg/star-full.svg" alt="" loading="lazy"></label>
+          <input type="radio" name="quality" value="1" id="star1">
+          <label for="star1"><img class="empty" src="assets/svg/star-empty.svg" alt="" loading="lazy"><img class="full" src="assets/svg/star-full.svg" alt="" loading="lazy"></label>
+        </div>
+        
+            <button class="btn width-154px close-popup" type="submit">
+              <div class="bg"></div><span>Отправить</span>
+            </button>
+      </form>
+      
+    </div>
+    
+    <div class="popup popup-thank-for-rate">
+      
+      
+      <div class="h3 popup__title">Спасибо за оценку!)</div>
+      
+      <div class="h5">Вопрос закрыт</div>
+      
+          <button class="btn close-popup" type="button">
+            <div class="bg"></div><span>Всегда пожалуйста</span>
+          </button>
+      
+    </div>
+    
+    <div class="popup popup-what-happen">
+      
+      
+      <div class="h3 popup__title">Что пошло не так?</div>
+      
+      <form class="form-what-happen" action="#">
+         
+        
+        <label class="checkable">
+          <input type="checkbox" name="checkable1">
+          <div class="bg"></div>
+          <div class="checkable__text">Специалист не до конца раскрыл вопрос</div>
+          <div class="checkable__icon">
+             <svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+</svg>
+          </div>
+        </label> 
+        
+        <label class="checkable">
+          <input type="checkbox" name="checkable1">
+          <div class="bg"></div>
+          <div class="checkable__text">Не получен внятный ответ</div>
+          <div class="checkable__icon">
+             <svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+</svg>
+          </div>
+        </label> 
+        
+        <label class="checkable">
+          <input type="checkbox" name="checkable1">
+          <div class="bg"></div>
+          <div class="checkable__text">Совет не помог</div>
+          <div class="checkable__icon">
+             <svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+</svg>
+          </div>
+        </label> 
+        
+        <label class="checkable">
+          <input type="checkbox" name="checkable1">
+          <div class="bg"></div>
+          <div class="checkable__text">Специалист нагрубил</div>
+          <div class="checkable__icon">
+             <svg width="24" height="24">
+<use xlink:href='./assets/svg/svg_sprite.svg#galka'></use> 
+</svg>
+          </div>
+        </label> 
+        
+            <button class="btn close-popup" type="submit">
+              <div class="bg"></div><span>Отправить</span>
+            </button>
+      </form>
+      
+    </div>
+    
+    <!-- popup template-->
+    <div class="popup">
+      
+      
+      <button class="popup__btn-close"> </button>
+      
+    </div>
+    
+    
+    
+    
+    
+  <script defer src="./assets/js/main.js"></script></body>
+  
+</html>
