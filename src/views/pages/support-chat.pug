@@ -142,6 +142,21 @@ block content
               |
               |
               li.list-messages__item
+                .message.message-client
+                  .message__text Пример с картинками
+                  .message__time 12:30 
+                  .message__imgs
+                    a(href="assets/images/programming1.png", download).wrap-img 
+                      img(src="assets/images/programming1.png", alt="", loading="lazy")
+                    a(href="assets/images/short-ava.jpg", download).wrap-img 
+                      img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                    a(href="assets/images/user-pic-1.jpg", download).wrap-img 
+                      img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                    a(href="assets/images/random-logo.jpg", download).wrap-img 
+                      img(src="assets/images/random-logo.jpg", alt="", loading="lazy")
+              |
+              |
+              li.list-messages__item
                 .chat__date ВЧЕРА
               |
               |
@@ -203,7 +218,7 @@ block content
                 .message.message-client
                   .message__text Круть
                   .message__time 12:30
-                  .message__attention.unread
+                  .message__attention.unread 
               |
               |
             |
@@ -211,7 +226,123 @@ block content
           |
           |
           .chat__main-footer
-            | А здесь будет всякая отправлялка текста
+            |
+            |
+            .chat__wrap-input 
+              |
+              |
+              textarea(placeholder="Сообщение...", row="1").textarea 
+              |
+              |
+              label(title="Добавить файл").btn-load-file
+                input(type="file", multiple, name="", accept="image/*")
+                <svg width="10" height="10" >
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-plus'></use> 
+                </svg>
+              |
+              |
+              button.btn-circle.btn-submit 
+                .bg
+                <svg width="16" height="12">
+                  <use xlink:href='./assets/svg/svg_sprite.svg#icon-arrow'></use> 
+                </svg>
+              |
+              |
+            |
+            |
+            //.chat__wrap-attach-imgs 
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/programming1.png", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/random-logo.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/programming1.png", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/random-logo.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/programming1.png", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/short-ava.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |
+              .wrap-img 
+                img(src="assets/images/user-pic-1.jpg", alt="", loading="lazy")
+                button.delete-this-img
+                  <svg width="10" height="10">
+                    <use xlink:href='./assets/svg/svg_sprite.svg#icon-close'></use> 
+                  </svg>
+              |
+              |    
+            |
+            |
           | 
           |
         |

@@ -44,6 +44,7 @@
   "dependencies": {
     "@popperjs/core": "^2.6.0",
     "aos": "^2.3.4",
+    "autosize": "^4.0.2",
     "baguettebox.js": "^1.11.1",
     "bideo.js": "^1.0.0",
     "cleave.js": "^1.6.0",

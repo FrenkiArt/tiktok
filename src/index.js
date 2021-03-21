@@ -5,6 +5,7 @@ import fullpage from 'fullpage.js';
 // import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
 import customSelect from 'custom-select';
 import '../node_modules/custom-select/build/custom-select.css';
+import autosize from '../node_modules/autosize/dist/autosize.js';
 
 import '../node_modules/fullpage.js/dist/fullpage.min.css';
 
@@ -38,24 +39,6 @@ import './views/mixins/mixins.scss';
 
 // Страницы
 // import './views/components/pages/index.scss';
-
-/**
- * Эта функция выводит ширину вьюпорта тогда,
- * когда происходит изменение размера окна
- * @date 2021-02-09
- * @return {void}
- */
-
-window.onresize = () => {
-  setTimeout(() => {
-    console.log(window.innerWidth);
-  }, 1);
-};
-
-if (window.matchMedia('(max-width: 640px)').matches) {
-  // do functionality on screens smaller than 640px
-} else {
-}
 
 // eslint-disable-next-line new-cap
 const fullPageInstance = new fullpage('#fullpage', {
@@ -119,123 +102,18 @@ if (document.querySelector('#change-profile-info')) {
     });
 }
 
-if (document.querySelector('#cancel-form-profile-live')) {
-  document
-    .querySelector('#cancel-form-profile-live')
-    .addEventListener('click', cancelFormProfileLive);
-}
-
-/**
- * Вывел в отдельную функцию, так как возможно придётся
- * отдельно отменять редактирование profile
- * @param {e} e Событие клика
- */
-function cancelFormProfileLive(e) {
-  document.querySelector('#form-profile-readonly').classList.remove('dn');
-  document.querySelector('.profile-cart__last-line').classList.remove('dn');
-  document.querySelector('.profile-cart__title').classList.remove('dn');
-  document.querySelector('#form-profile-live').classList.add('dn');
-  document.querySelector('.list-actions').classList.add('dn');
-}
-
-if (document.querySelector('.load-line')) {
-  window.makeLoadLine = function (arg, arg2) {
-    makeLoadLine(arg, arg2);
-  };
-}
-
-/**
- * Сделаем линию загрузки
- * @param {string} arg Строка со значением на которое надо сделать линию
- * @param {string} arg2 Время на анимацию
- */
-function makeLoadLine(arg, arg2) {
-  document.querySelector('.load-line').style.transition = arg2 + 's';
-  document.querySelector('.load-line').style.transform =
-    'scaleX(' + arg / 100 + ')';
-}
-
 /* Работа с select-ами */
 customSelect('select');
 
-/* Открывашка для таблицы .available-table */
+window.autosizeTextarea = function () {
+  autosize.update(document.querySelector('.chat__wrap-input textarea'));
+};
 
-if (document.querySelector('.available-table .btn--look')) {
-  document
-    .querySelectorAll('.available-table .btn--look')
-    .forEach((element) => {
-      element.addEventListener('click', function (e) {
-        // const btnLook = e.target.closest('.btn--look');
-        const rowParent = e.target.closest('tr');
-        const isOpenTr = rowParent.classList.contains('open');
-        const asideBlock = document.querySelector('.page-available__aside');
-        const userInfo = rowParent.querySelector('.user-info');
+autosize(document.querySelectorAll('.chat__wrap-input textarea'));
 
-        if (window.matchMedia('(max-width: 1000px)').matches) {
-          // do functionality on screens smaller than 768px
-        } else {
-          userInfo.style.height =
-            asideBlock.getBoundingClientRect().height + 'px';
-          userInfo.style.width =
-            asideBlock.getBoundingClientRect().width + 'px';
-        }
+const customJsScript = document.createElement('script');
+customJsScript.type = 'text/javascript';
+customJsScript.defer = true;
+customJsScript.src = './assets/js/custom-js.js';
 
-        document.querySelectorAll('.available-table tr').forEach((tr) => {
-          if (tr == rowParent && isOpenTr) {
-            tr.classList.remove('open');
-          } else if (tr == rowParent && !isOpenTr) {
-            tr.classList.add('open');
-          } else {
-            tr.classList.remove('open');
-          }
-        });
-      });
-    });
-}
-
-/* Работа с альтернативным меню */
-
-if (document.querySelector('.btn-menu')) {
-  document.querySelector('.btn-menu').addEventListener('click', function () {
-    document.querySelector('.alt-menu').classList.toggle('open');
-  });
-
-  document
-    .querySelector('.alt-menu__close')
-    .addEventListener('click', function () {
-      document.querySelector('.alt-menu').classList.remove('open');
-    });
-
-  document.querySelector('.alt-menu').addEventListener('click', function (e) {
-    if (e.target.classList.contains('alt-menu')) {
-      document.querySelector('.alt-menu').classList.remove('open');
-    }
-  });
-}
-
-/* Работа с чатом */
-/* Работа с левой частью где список чатов сокращённо */
-if (document.querySelector('.chats-list')) {
-  document.querySelector('.chats-list').addEventListener('click', function (e) {
-    if (e.target.closest('.delete')) {
-      e.target.closest('.chats-list__item').remove();
-    } else if (e.target.closest('.chats-list__item')) {
-      document.querySelectorAll('.chats-list__item').forEach((item) => {
-        item.classList.remove('open');
-      });
-      e.target.closest('.chats-list__item').classList.add('open');
-
-      document.querySelector('.chat__aside').classList.add('mob-hide');
-    }
-  });
-
-  document
-    .querySelector('.chat__main .arr-back')
-    .addEventListener('click', function () {
-      document.querySelector('.chat__aside').classList.remove('mob-hide');
-
-      document.querySelectorAll('.chats-list__item').forEach((item) => {
-        item.classList.remove('open');
-      });
-    });
-}
+document.body.appendChild(customJsScript);

@@ -88,6 +88,10 @@ module.exports = {
           from: 'src/assets/svg/**/*',
           to: path.resolve(__dirname, 'dist/assets/svg/[name].[ext]'),
         },
+        {
+          from: 'src/assets/js/custom-js.js',
+          to: path.resolve(__dirname, 'dist/assets/js/custom-js.js'),
+        },
       ],
     }),
     /* new webpack.ProvidePlugin({
