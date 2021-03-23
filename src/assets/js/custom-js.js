@@ -43,7 +43,7 @@ function cancelFormProfileLive(e) {
 /* Работа с линией загрузки */
 
 if (document.querySelector('.load-line')) {
-  window.makeLoadLine = function (arg, arg2) {
+  window.loadLine = function (arg, arg2) {
     makeLoadLine(arg, arg2);
   };
 }
@@ -58,6 +58,9 @@ function makeLoadLine(arg, arg2) {
   document.querySelector('.load-line').style.transform =
     'scaleX(' + arg / 100 + ')';
 }
+window.makeLoad = function (arg, arg2) {
+  makeLoadLine(arg, arg2);
+};
 
 /* Открывашка для таблицы .available-table */
 
