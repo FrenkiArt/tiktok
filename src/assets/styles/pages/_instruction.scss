@@ -3,7 +3,8 @@
 .page-instruction {
   align-items: center;
   display: flex;
-  min-height: calc(100vh - 72px - 312px);
+  // min-height: calc(100vh - 72px - 312px);
+  min-height: calc(100vh - 72px);
   position: relative;
 
   @media screen and(max-width: 800px) {
@@ -17,7 +18,8 @@
     //position: absolute;
     //right: 0;
     background-color: rgba(123, 141, 220, 0.17);
-    height: calc(100vh - 72px - 312px);
+    // height: calc(100vh - 72px - 312px);
+    height: calc(100vh - 72px);
     overflow: hidden;
     position: relative;
     width: calc(100% - 1360px);

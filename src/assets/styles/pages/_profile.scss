@@ -4,7 +4,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 72px - 312px);
+  // min-height: calc(100vh - 72px - 312px);
+  min-height: calc(100vh - 72px);
   position: relative;
   padding: 50px 0 70px;
   // background-color: #060f23;

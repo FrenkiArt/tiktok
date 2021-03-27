@@ -300,3 +300,43 @@ function sendMessage(string, imgsUrlArray, time) {
     behavior: 'smooth',
   });
 }
+
+if (document.querySelector('#open-popup-login')) {
+  document
+    .querySelector('#open-popup-login')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      window.closeAllPopup();
+      window.showOverlay();
+      window.openPopup('.popup-login');
+    });
+}
+
+if (document.querySelector('#open-popup-forgot-password')) {
+  document
+    .querySelector('#open-popup-forgot-password')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      window.closeAllPopup();
+      window.showOverlay();
+      window.openPopup('.popup-forget-password');
+    });
+}
+
+if (document.querySelector('#change-profile-info')) {
+  document
+    .querySelector('#change-profile-info')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector('#form-profile-readonly').classList.add('dn');
+      document.querySelector('.profile-cart__last-line').classList.add('dn');
+      document.querySelector('.profile-cart__title').classList.add('dn');
+      document.querySelector('#form-profile-live').classList.remove('dn');
+      if (document.querySelector('.list-actions')) {
+        document.querySelector('.list-actions').classList.remove('dn');
+      }
+    });
+}

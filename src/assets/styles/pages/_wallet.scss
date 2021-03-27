@@ -109,8 +109,9 @@
 
   // .page-wallet__main
   &__main {
-    padding: 48px;
-    min-height: calc(100vh - 72px - 312px);
+    padding: 82px 48px 48px;
+    // min-height: calc(100vh - 72px - 312px);
+    min-height: calc(100vh - 72px);
     width: 1360px;
 
     @media screen and(max-width: 1200px) {
