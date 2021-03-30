@@ -38,15 +38,15 @@
       }
 
       & ~ .uni-input__wrap-icons .icon-clear {
-        display: block;
+        display: inline-flex;
       }
 
       & ~ .uni-input__wrap-icons .icon-hide-pass {
-        display: block;
+        display: inline-flex;
       }
 
       & ~ .uni-input__wrap-icons .icon-show-pass {
-        display: block;
+        display: inline-flex;
       }
     }
 
@@ -67,7 +67,7 @@
     &:invalid,
     &.invalid {
       & ~ .uni-input__wrap-icons .icon-wrong {
-        display: block;
+        display: inline-flex;
       }
     }
   }
@@ -95,6 +95,7 @@
     button {
       padding: 0;
       display: none;
+      align-items: center;
 
       &.dn {
         display: none !important;
@@ -169,8 +170,25 @@
   }
 
   .uni-input__placeholder {
-    color: #8c91a0;
+    color: #787c86;
     background-color: #1a2442;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #787c86;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+    color: #787c86;
+    opacity: 1;
+  } /* Firefox 19+ */
+  :-moz-placeholder {
+    color: #787c86;
+    opacity: 1;
+  } /* Firefox 18- */
+  :-ms-input-placeholder {
+    color: #787c86;
+    opacity: 1;
   }
 
   .ruble {
@@ -219,6 +237,23 @@
   .uni-input__placeholder {
     color: #bdbdbd;
     background-color: #ffffff;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+  } /* Firefox 19+ */
+  :-moz-placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+  } /* Firefox 18- */
+  :-ms-input-placeholder {
+    color: #bdbdbd;
+    opacity: 1;
   }
 }
 

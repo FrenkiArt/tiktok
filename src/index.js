@@ -7,6 +7,8 @@ import customSelect from 'custom-select';
 import '../node_modules/custom-select/build/custom-select.css';
 import autosize from '../node_modules/autosize/dist/autosize.js';
 
+import Cleave from 'cleave.js';
+
 import '../node_modules/fullpage.js/dist/fullpage.min.css';
 
 // Шрифты
@@ -40,6 +42,32 @@ import './views/mixins/mixins.scss';
 // Страницы
 // import './views/components/pages/index.scss';
 
+if (window.matchMedia('(max-width: 640px)').matches) {
+  // do functionality on screens smaller than 640px
+  if (document.querySelector('.input-date')) {
+    document.querySelectorAll('.input-date').forEach((date) => {
+      date.type = 'date';
+      date.placeholder = '31.12.1990';
+    });
+  }
+} else {
+  // Декстоп
+
+  if (document.querySelector('.input-date')) {
+    document.querySelectorAll('.input-date').forEach((date) => {
+      // eslint-disable-next-line no-unused-vars
+      const cleave = new Cleave(date, {
+        date: true,
+        delimiter: '.',
+        datePattern: ['d', 'm', 'Y'],
+        // dateMax: '2021-03-30',
+      });
+    });
+  }
+}
+
+// console.log('cleave.js', cleave);
+
 // eslint-disable-next-line new-cap
 const fullPageInstance = new fullpage('#fullpage', {
   licenseKey: null,
@@ -51,11 +79,20 @@ const fullPageInstance = new fullpage('#fullpage', {
   scrollBar: true,
   menu: '#myMenu',
   scrollOverflowReset: true,
+  scrollingSpeed: 500,
+  css3: true,
+  // easing: 'easeInOutCubic',
+  // easing: 'linear',
+  // easingcss3: 'ease',
+  easingcss3: 'linear',
+  touchSensitivity: 5,
   // dragAndMove: true,
   // paddingTop: '72px',
   // fixedElements: '#header, #footer',
   // sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c', 'grey'],
 });
+
+window.fullPageInstance = fullPageInstance;
 
 console.log(fullPageInstance);
 
